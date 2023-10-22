@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" data-bs-theme="dark">
+<html lang="en">
 
 <head>
   <meta charset="UTF-8">
@@ -16,77 +16,95 @@
 </head>
 
 <body>
-  <nav class="navbar fixed-top navbar-expand-lg bg-body-tertiary">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">Navbar</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#welcome-section">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#projects">Projetos</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#contato">Contato</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-        </li>
-      </ul>
-    </div>
-  </div>
-</nav>
-
+  <ul class="nav justify-content-end">
+  <li class="nav-item">
+    <a class="nav-link active" aria-current="page" href="#welcome-section"><button type="button" class="btn btn-outline-dark">Home</button></a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#projects"><button type="button" class="btn btn-outline-dark">Projects</button></a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#certification"><button type="button" class="btn btn-outline-dark">Certification</button></a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#contact"><button type="button" class="btn btn-outline-dark">Contact</button></a>
+  </li>
+</ul>
     <div id="welcome-section">
       <h1>Ei, eu sou Munique</h1>
       <p>uma futura desenvolvedora web</p>
     </div>
     <div id="projects">
       <p class="project-tile">Estes são alguns dos projetos<br>que sou capaz de fazer </p>
-      <section>
-        <figure>
-          <img src="https://cdn.freecodecamp.org/testable-projects-fcc/images/tribute.jpg">
-          <fieldset>
-            Página Homenagem
-          </fieldset>
-        </figure>
-        <figure>
-          <img src="https://cdn.freecodecamp.org/testable-projects-fcc/images/random-quote-machine.png">
-          <fieldset>
-            Máquina de cotação aleatória
-          </fieldset>
-        </figure>
-        <figure>
-          <img src="https://cdn.freecodecamp.org/testable-projects-fcc/images/calc.png">
-          <fieldset>
-            Calculadora JavaScript
-          </fieldset>
-        </figure>
-        <figure>
-          <img src="https://cdn.freecodecamp.org/testable-projects-fcc/images/map.jpg">
-          <fieldset>
-            Dados do mapa em todo o mundo
-          </fieldset>
-        </figure>
-        <figure>
-          <img src="https://cdn.freecodecamp.org/testable-projects-fcc/images/wiki.png">
-          <fieldset>
-            Visualizador da Wikipédia
-          </fieldset>
-        </figure>
-        <figure>
-          <img src="https://cdn.freecodecamp.org/testable-projects-fcc/images/tic-tac-toe.png">
-          <fieldset>
-            Jogo da velha
-          </fieldset>
-        </figure>
+     
+      <div class="row row-cols-1 row-cols-md-3 g-4">
+        <div class="col">
+          <div class="card h-100 border-dark">
+            <img src="./src/images/detona_ralph.jpg" class="card-img-top img-fluid" alt="Detona Ralph game">
+            <div class="card-body">
+              <h5 class="card-title">Detona Ralph</h5>
+              <p class="card-text">Jogo do Detona Ralph onde você pode perder vidas, receber feedback do score e tempo corrido, acessível apenas em computador.</p>
+            </div>
+            <a href="https://munique-feitoza.github.io/detona_ralph_aula_dio/" class="btn btn-outline-dark">Playground do GitHub</a>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100 border-dark">
+            <img src="./src/images/map_d3.jpg" class="card-img-top img-fluid" alt="">
+            <div class="card-body">
+              <h5 class="card-title">Choropleth Map</h5>
+              <p class="card-text">Um mapa com dados onde usei APIs e D3.</p>
+            </div>
+            <a href="https://munique-feitoza.github.io/choropleth_map_using_d3/" class="btn btn-outline-dark">Playground do GitHub</a>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100 border-dark">
+            <img src="./src/images/ping_pong_game.jpg" class="card-img-top img-fluid" alt="Ping pong game">
+            <div class="card-body">
+              <h5 class="card-title">Ping Pong Game</h5>
+              <p class="card-text">O famoso jogo ping ponde onde você pode relembrar a infância e jogar com algum amigo seu, acessível apenas em computador.</p>
+            </div>
+            <a href="https://munique-feitoza.github.io/ping_pong_game_in_js/" class="btn btn-outline-dark">Playground do GitHub</a>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100 border-dark">
+            <img src="./src/images/snake_game.jpg" class="card-img-top img-fluid" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Snake Game</h5>
+              <p class="card-text">O famoso jogo da cobra onde você pode relembrar a infância, acessível apenas em computador.</p>
+            </div>
+            <a href="https://munique-feitoza.github.io/game_snake_in_js/" class="btn btn-outline-dark">Playground do GitHub</a>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100 border-dark">
+            <img src="./src/images/memory_game.jpg" class="card-img-top img-fluid" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Memory Game</h5>
+              <p class="card-text">O jogo da memória usando memes de animais, acessível a celular e computador.</p>
+            </div>
+            <a href="https://munique-feitoza.github.io/memory_game_in_js_aula_dio/" class="btn btn-outline-dark">Playground do GitHub</a>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100 border-dark">
+            <img src="./src/images/landing_page.jpg" class="card-img-top img-fluid" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Landing Page</h5>
+              <p class="card-text">Você pensou que só teria jogos né? Essa é uma landing page de um curso e eu gostei tanto que deixei aqui.</p>
+            </div>
+            <a href="https://munique-feitoza.github.io/trilha-css-desafio-01/" class="btn btn-outline-dark">Playground do GitHub</a>
+          </div>
+        </div>
+      </div>
+            
+ 
+         
       </section> <button><a href="https://github.com/Munique-Feitoza" id="profile-link" target="_blank">Mostre tudo -&gt;</a></button>
     </div>
-    <div id="contato">
+    <div id="contact">
       <h2>Vamos trabalhar juntos?</h2>
       <p>Qual café você gosta?</p>
       <section id="contact">
@@ -136,6 +154,6 @@ c3,0,5.5,0.9,7.3,2.7c1.7,1.8,2.7,4.3,2.7,7.2V39.9L48.6,39.9z" />
   <!-- BOOTSTRAP JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-</body>
-
-</html>
+  <script src="./src/scripts/main.js"></script>
+ </body>
+                                                                                                                           </html></html>
