@@ -7,9 +7,9 @@ To do | status
 :----:|:-------:
 Código Bootstrap | ⭕
 Navbar Bootstrap | ⭕
-Grid Bootstrap | ❌
+Grid Bootstrap | ⭕
 Decidir cor do portifólio | ❌
 Adicionar certificados | ❌
-Adicionar projetos | ❌
+Adicionar projetos | ⭕
 
 A lista pode aumentar dependendo da necessidade...
