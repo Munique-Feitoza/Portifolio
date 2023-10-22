@@ -1,107 +1,141 @@
 <!doctype html>
-<html lang="en"> 
- <head> 
-  <meta charset="UTF-8"> 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-  <link rel="stylesheet" href="./src/styles/styles.css"> 
-  <title>Portifólio</title> 
-</head> 
- <body> 
-  <div> 
-   <nav id="navbar"> 
-    <ul id="nav"> 
-     <li><a href="#welcome-section">Sobre</a></li> 
-     <li><a href="#projects">Projetos</a></li> 
-     <li><a href="#contato">Contato</a></li> 
-    </ul> 
-   </nav> 
-   <div id="welcome-section"> 
-    <h1>Ei, eu sou Munique</h1> 
-    <p>uma futura desenvolvedora web</p> 
-   </div> 
-   <div id="projects"> 
-    <p class="project-tile">Estes são alguns dos projetos<br>que sou capaz de fazer </p> 
-    <section> 
-     <figure> 
-      <img src="https://cdn.freecodecamp.org/testable-projects-fcc/images/tribute.jpg"> 
-      <fieldset>
-        Página Homenagem 
-      </fieldset> 
-     </figure> 
-     <figure> 
-      <img src="https://cdn.freecodecamp.org/testable-projects-fcc/images/random-quote-machine.png"> 
-      <fieldset>
-        Máquina de cotação aleatória 
-      </fieldset> 
-     </figure> 
-     <figure> 
-      <img src="https://cdn.freecodecamp.org/testable-projects-fcc/images/calc.png"> 
-      <fieldset>
-        Calculadora JavaScript 
-      </fieldset> 
-     </figure> 
-     <figure> 
-      <img src="https://cdn.freecodecamp.org/testable-projects-fcc/images/map.jpg"> 
-      <fieldset>
-        Dados do mapa em todo o mundo 
-      </fieldset> 
-     </figure> 
-     <figure> 
-      <img src="https://cdn.freecodecamp.org/testable-projects-fcc/images/wiki.png"> 
-      <fieldset>
-        Visualizador da Wikipédia 
-      </fieldset> 
-     </figure> 
-     <figure> 
-      <img src="https://cdn.freecodecamp.org/testable-projects-fcc/images/tic-tac-toe.png"> 
-      <fieldset>
-        Jogo da velha 
-      </fieldset> 
-     </figure> 
-    </section> <button><a href="https://github.com/Munique-Feitoza" id="profile-link" target="_blank">Mostre tudo -&gt;</a></button> 
-   </div> 
-   <div id="contato"> 
-    <h2>Vamos trabalhar juntos?</h2> 
-    <p>Qual café você gosta?</p> 
-    <section id="contact"> 
-     <section id="git"> <!--?xml version="1.0" ?--> 
-      <svg enable-background="new 0 0 512 512" id="Layer_1" version="1.1" viewbox="0 0 512 512" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"> <g> 
-        <path d="M256.6,507.8C118.1,507.3,7.3,393.8,8.5,254.7C9.6,118.1,119.9,4.6,260.2,6.3   C397.3,7.9,507.1,121.1,505.5,260C504,396,394.7,507.7,256.6,507.8z M221.2,377.5c-1.6-0.3-2.3-0.4-3.1-0.5   c-19.1-2.7-37-8.4-53-19.8c-17.1-12.2-27.6-28.6-31.9-48.7c-4.4-20.5-2.7-41.2,0.5-61.7c2.2-14.1,7-27.4,18-37.5   c1.6-1.5,1.5-2.7,0.7-4.7c-6-16.6-5.3-33.3-0.3-50c1-3.3,2.6-4.7,6.1-3.4c4.2,1.5,8.5,2.8,12.4,5.1c10.7,6.3,18.9,15,26.1,24.9   c1.8,2.4,3,2.8,5.5,1.1c6.2-4.3,13.5-5.6,20.6-6.9c17.2-3.2,34.5-2.6,51.8-1.8c10.1,0.5,20.1,2.3,29.7,5.9c3,1.1,5.7,5,8.5,3.5   c2.8-1.4,4.5-5.2,6.7-7.8c8.8-10.6,18.9-19.4,32.5-23.7c4.4-1.4,6.4-0.7,7.9,4c5,16.3,5.7,32.4-0.6,48.4c-1,2.5-0.8,4.3,1.3,6.2   c8.3,7.7,13.1,17.6,15.6,28.5c4.3,18.6,5.4,37.6,4.2,56.6c-1.2,18.2-7.1,34.8-19.3,48.8c-16.4,18.8-37.8,28.1-61.9,32.2   c-2.8,0.5-5.7,1-8.7,1.5c7.1,11.1,10.5,22.6,10.6,35c0.1,14.3,0,28.7,0,43c0,9.3,0,18.6,0,28c15.2-1.5,43.6-11.6,63.4-22.4   c92.3-50.3,138.9-154.2,115.4-257.1C452.1,81.8,331,4.5,208.6,31C93,56.1,13,167.5,30.4,289.9c8.1,56.9,34.2,104.5,77.4,142.4   c28.5,25,61.5,41.7,98.5,50.3c2.9,0.7,4.2,0.5,4.1-3c-0.2-9.8-0.2-19.7,0-29.5c0-3.3-0.6-4.3-4.2-3.6c-6.5,1.3-13.2,2-19.9,1.6   c-21.2-1.1-38.4-9.5-50.5-27.5c-4.1-6.1-6.4-13.2-10.3-19.3c-6.9-10.7-13-22-24.5-28.9c-1.5-0.9-3.3-2.3-2.4-4.4   c0.8-2,3-1.7,4.8-1.9c12.8-1,23.3,3.8,32,13c4.6,4.9,7.5,11,11.5,16.3c13.3,17.7,38.7,25.3,59.5,17.8c3-1.1,3.9-2.6,4.3-5.7   C211.9,397,213.9,386.7,221.2,377.5z" fill="#120606" /> 
-       </g> 
-      </svg> <a href="https://github.com/Munique-Feitoza">GitHub</a> 
-     </section> 
-     <section id="linkedin"> 
-      <svg id="Layer_2" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewbox="0 0 32 32">
-<path d="M 7.5 5 C 6.132813 5 5 6.132813 5 7.5 L 5 24.5 C 5 25.867188 6.132813 27 7.5 27 L 24.5 27 C 25.867188 27 27 25.867188 27 24.5 L 27 7.5 C 27 6.132813 25.867188 5 24.5 5 Z M 7.5 7 L 24.5 7 C 24.785156 7 25 7.214844 25 7.5 L 25 24.5 C 25 24.785156 24.785156 25 24.5 25 L 7.5 25 C 7.214844 25 7 24.785156 7 24.5 L 7 7.5 C 7 7.214844 7.214844 7 7.5 7 Z M 10.4375 8.71875 C 9.488281 8.71875 8.71875 9.488281 8.71875 10.4375 C 8.71875 11.386719 9.488281 12.15625 10.4375 12.15625 C 11.386719 12.15625 12.15625 11.386719 12.15625 10.4375 C 12.15625 9.488281 11.386719 8.71875 10.4375 8.71875 Z M 19.46875 13.28125 C 18.035156 13.28125 17.082031 14.066406 16.6875 14.8125 L 16.625 14.8125 L 16.625 13.5 L 13.8125 13.5 L 13.8125 23 L 16.75 23 L 16.75 18.3125 C 16.75 17.074219 16.996094 15.875 18.53125 15.875 C 20.042969 15.875 20.0625 17.273438 20.0625 18.375 L 20.0625 23 L 23 23 L 23 17.78125 C 23 15.226563 22.457031 13.28125 19.46875 13.28125 Z M 9 13.5 L 9 23 L 11.96875 23 L 11.96875 13.5 Z"></path>
-</svg> <a href="https://www.linkedin.com/in/munique-feitoza-77034b231/">LinkedIn</a> 
-     </section> 
-     <section id="instagram"> <!--?xml version="1.0" encoding="utf-8"?--> 
-      <svg version="1.1" id="Layer_3" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewbox="0 0 56.7 56.7" enable-background="new 0 0 56.7 56.7" xml:space="preserve"> <g> 
-        <path d="M28.2,16.7c-7,0-12.8,5.7-12.8,12.8s5.7,12.8,12.8,12.8S41,36.5,41,29.5S35.2,16.7,28.2,16.7z M28.2,37.7
-  c-4.5,0-8.2-3.7-8.2-8.2s3.7-8.2,8.2-8.2s8.2,3.7,8.2,8.2S32.7,37.7,28.2,37.7z" /> 
-        <circle cx="41.5" cy="16.4" r="2.9" /> 
-        <path d="M49,8.9c-2.6-2.7-6.3-4.1-10.5-4.1H17.9c-8.7,0-14.5,5.8-14.5,14.5v20.5c0,4.3,1.4,8,4.2,10.7c2.7,2.6,6.3,3.9,10.4,3.9
+<html lang="en" data-bs-theme="dark">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- BOOTSTRAP CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="./src/styles/styles.css">
+  <title>Portifólio</title>
+</head>
+
+<body>
+  <nav class="navbar fixed-top navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#welcome-section">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#projects">Projetos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#contato">Contato</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div id="welcome-section">
+      <h1>Ei, eu sou Munique</h1>
+      <p>uma futura desenvolvedora web</p>
+    </div>
+    <div id="projects">
+      <p class="project-tile">Estes são alguns dos projetos<br>que sou capaz de fazer </p>
+      <section>
+        <figure>
+          <img src="https://cdn.freecodecamp.org/testable-projects-fcc/images/tribute.jpg">
+          <fieldset>
+            Página Homenagem
+          </fieldset>
+        </figure>
+        <figure>
+          <img src="https://cdn.freecodecamp.org/testable-projects-fcc/images/random-quote-machine.png">
+          <fieldset>
+            Máquina de cotação aleatória
+          </fieldset>
+        </figure>
+        <figure>
+          <img src="https://cdn.freecodecamp.org/testable-projects-fcc/images/calc.png">
+          <fieldset>
+            Calculadora JavaScript
+          </fieldset>
+        </figure>
+        <figure>
+          <img src="https://cdn.freecodecamp.org/testable-projects-fcc/images/map.jpg">
+          <fieldset>
+            Dados do mapa em todo o mundo
+          </fieldset>
+        </figure>
+        <figure>
+          <img src="https://cdn.freecodecamp.org/testable-projects-fcc/images/wiki.png">
+          <fieldset>
+            Visualizador da Wikipédia
+          </fieldset>
+        </figure>
+        <figure>
+          <img src="https://cdn.freecodecamp.org/testable-projects-fcc/images/tic-tac-toe.png">
+          <fieldset>
+            Jogo da velha
+          </fieldset>
+        </figure>
+      </section> <button><a href="https://github.com/Munique-Feitoza" id="profile-link" target="_blank">Mostre tudo -&gt;</a></button>
+    </div>
+    <div id="contato">
+      <h2>Vamos trabalhar juntos?</h2>
+      <p>Qual café você gosta?</p>
+      <section id="contact">
+        <section id="git"> <!--?xml version="1.0" ?-->
+          <svg enable-background="new 0 0 512 512" id="Layer_1" version="1.1" viewbox="0 0 512 512" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px">
+            <g>
+              <path d="M256.6,507.8C118.1,507.3,7.3,393.8,8.5,254.7C9.6,118.1,119.9,4.6,260.2,6.3   C397.3,7.9,507.1,121.1,505.5,260C504,396,394.7,507.7,256.6,507.8z M221.2,377.5c-1.6-0.3-2.3-0.4-3.1-0.5   c-19.1-2.7-37-8.4-53-19.8c-17.1-12.2-27.6-28.6-31.9-48.7c-4.4-20.5-2.7-41.2,0.5-61.7c2.2-14.1,7-27.4,18-37.5   c1.6-1.5,1.5-2.7,0.7-4.7c-6-16.6-5.3-33.3-0.3-50c1-3.3,2.6-4.7,6.1-3.4c4.2,1.5,8.5,2.8,12.4,5.1c10.7,6.3,18.9,15,26.1,24.9   c1.8,2.4,3,2.8,5.5,1.1c6.2-4.3,13.5-5.6,20.6-6.9c17.2-3.2,34.5-2.6,51.8-1.8c10.1,0.5,20.1,2.3,29.7,5.9c3,1.1,5.7,5,8.5,3.5   c2.8-1.4,4.5-5.2,6.7-7.8c8.8-10.6,18.9-19.4,32.5-23.7c4.4-1.4,6.4-0.7,7.9,4c5,16.3,5.7,32.4-0.6,48.4c-1,2.5-0.8,4.3,1.3,6.2   c8.3,7.7,13.1,17.6,15.6,28.5c4.3,18.6,5.4,37.6,4.2,56.6c-1.2,18.2-7.1,34.8-19.3,48.8c-16.4,18.8-37.8,28.1-61.9,32.2   c-2.8,0.5-5.7,1-8.7,1.5c7.1,11.1,10.5,22.6,10.6,35c0.1,14.3,0,28.7,0,43c0,9.3,0,18.6,0,28c15.2-1.5,43.6-11.6,63.4-22.4   c92.3-50.3,138.9-154.2,115.4-257.1C452.1,81.8,331,4.5,208.6,31C93,56.1,13,167.5,30.4,289.9c8.1,56.9,34.2,104.5,77.4,142.4   c28.5,25,61.5,41.7,98.5,50.3c2.9,0.7,4.2,0.5,4.1-3c-0.2-9.8-0.2-19.7,0-29.5c0-3.3-0.6-4.3-4.2-3.6c-6.5,1.3-13.2,2-19.9,1.6   c-21.2-1.1-38.4-9.5-50.5-27.5c-4.1-6.1-6.4-13.2-10.3-19.3c-6.9-10.7-13-22-24.5-28.9c-1.5-0.9-3.3-2.3-2.4-4.4   c0.8-2,3-1.7,4.8-1.9c12.8-1,23.3,3.8,32,13c4.6,4.9,7.5,11,11.5,16.3c13.3,17.7,38.7,25.3,59.5,17.8c3-1.1,3.9-2.6,4.3-5.7   C211.9,397,213.9,386.7,221.2,377.5z" fill="#120606" />
+            </g>
+          </svg> <a href="https://github.com/Munique-Feitoza">GitHub</a>
+        </section>
+        <section id="linkedin">
+          <svg id="Layer_2" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewbox="0 0 32 32">
+            <path d="M 7.5 5 C 6.132813 5 5 6.132813 5 7.5 L 5 24.5 C 5 25.867188 6.132813 27 7.5 27 L 24.5 27 C 25.867188 27 27 25.867188 27 24.5 L 27 7.5 C 27 6.132813 25.867188 5 24.5 5 Z M 7.5 7 L 24.5 7 C 24.785156 7 25 7.214844 25 7.5 L 25 24.5 C 25 24.785156 24.785156 25 24.5 25 L 7.5 25 C 7.214844 25 7 24.785156 7 24.5 L 7 7.5 C 7 7.214844 7.214844 7 7.5 7 Z M 10.4375 8.71875 C 9.488281 8.71875 8.71875 9.488281 8.71875 10.4375 C 8.71875 11.386719 9.488281 12.15625 10.4375 12.15625 C 11.386719 12.15625 12.15625 11.386719 12.15625 10.4375 C 12.15625 9.488281 11.386719 8.71875 10.4375 8.71875 Z M 19.46875 13.28125 C 18.035156 13.28125 17.082031 14.066406 16.6875 14.8125 L 16.625 14.8125 L 16.625 13.5 L 13.8125 13.5 L 13.8125 23 L 16.75 23 L 16.75 18.3125 C 16.75 17.074219 16.996094 15.875 18.53125 15.875 C 20.042969 15.875 20.0625 17.273438 20.0625 18.375 L 20.0625 23 L 23 23 L 23 17.78125 C 23 15.226563 22.457031 13.28125 19.46875 13.28125 Z M 9 13.5 L 9 23 L 11.96875 23 L 11.96875 13.5 Z"></path>
+          </svg> <a href="https://www.linkedin.com/in/munique-feitoza-77034b231/">LinkedIn</a>
+        </section>
+        <section id="instagram"> <!--?xml version="1.0" encoding="utf-8"?-->
+          <svg version="1.1" id="Layer_3" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewbox="0 0 56.7 56.7" enable-background="new 0 0 56.7 56.7" xml:space="preserve">
+            <g>
+              <path d="M28.2,16.7c-7,0-12.8,5.7-12.8,12.8s5.7,12.8,12.8,12.8S41,36.5,41,29.5S35.2,16.7,28.2,16.7z M28.2,37.7
+  c-4.5,0-8.2-3.7-8.2-8.2s3.7-8.2,8.2-8.2s8.2,3.7,8.2,8.2S32.7,37.7,28.2,37.7z" />
+              <circle cx="41.5" cy="16.4" r="2.9" />
+              <path d="M49,8.9c-2.6-2.7-6.3-4.1-10.5-4.1H17.9c-8.7,0-14.5,5.8-14.5,14.5v20.5c0,4.3,1.4,8,4.2,10.7c2.7,2.6,6.3,3.9,10.4,3.9
     h20.4c4.3,0,7.9-1.4,10.5-3.9c2.7-2.6,4.1-6.3,4.1-10.6V19.3C53,15.1,51.6,11.5,49,8.9z M48.6,39.9c0,3.1-1.1,5.6-2.9,7.3
     s-4.3,2.6-7.3,2.6H18c-3,0-5.5-0.9-7.3-2.6C8.9,45.4,8,42.9,8,39.8V19.3c0-3,0.9-5.5,2.7-7.3c1.7-1.7,4.3-2.6,7.3-2.6h20.6
-c3,0,5.5,0.9,7.3,2.7c1.7,1.8,2.7,4.3,2.7,7.2V39.9L48.6,39.9z" /> 
-       </g> 
-      </svg> <a href="https://instagram.com/_nitroglycrin?utm_source=qr&amp;igshid=MzNlNGNkZWQ4Mg%3D%3D">Instagram</a> 
-     </section> 
-     <section id="gmail"> <!--?xml version="1.0" ?--> 
-      <svg id="Layer_4" x="0px" y="0px" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"> 
-       <title></title><g data-name="8-Email" id="_8-Email"> 
-        <path d="M45,7H3a3,3,0,0,0-3,3V38a3,3,0,0,0,3,3H45a3,3,0,0,0,3-3V10A3,3,0,0,0,45,7Zm-.64,2L24,24.74,3.64,9ZM2,37.59V10.26L17.41,22.17ZM3.41,39,19,23.41l4.38,3.39a1,1,0,0,0,1.22,0L29,23.41,44.59,39ZM46,37.59,30.59,22.17,46,10.26Z" /> 
-       </g> 
-      </svg> <a href="mailto:muniquefeitoz4@gmail.com">Gmail</a> 
-     </section> 
-    </section> 
-   </div> 
-   <footer> 
-    <p id="texto1">** Este é apenas um portfólio de teste.<br>
-       Todos os projetos e detalhes foram feitos como aprendizado.
-       <br> Produzido em um celular.</p> 
-    <p id="texto2">Criado por Munique Feitoza.</p> 
-   </footer> 
-  </div> 
- 
-</body></html>
+c3,0,5.5,0.9,7.3,2.7c1.7,1.8,2.7,4.3,2.7,7.2V39.9L48.6,39.9z" />
+            </g>
+          </svg> <a href="https://instagram.com/_nitroglycrin?utm_source=qr&amp;igshid=MzNlNGNkZWQ4Mg%3D%3D">Instagram</a>
+        </section>
+        <section id="gmail"> <!--?xml version="1.0" ?-->
+          <svg id="Layer_4" x="0px" y="0px" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+            <title></title>
+            <g data-name="8-Email" id="_8-Email">
+              <path d="M45,7H3a3,3,0,0,0-3,3V38a3,3,0,0,0,3,3H45a3,3,0,0,0,3-3V10A3,3,0,0,0,45,7Zm-.64,2L24,24.74,3.64,9ZM2,37.59V10.26L17.41,22.17ZM3.41,39,19,23.41l4.38,3.39a1,1,0,0,0,1.22,0L29,23.41,44.59,39ZM46,37.59,30.59,22.17,46,10.26Z" />
+            </g>
+          </svg> <a href="mailto:muniquefeitoz4@gmail.com">Gmail</a>
+        </section>
+      </section>
+    </div>
+    <footer>
+      <p id="texto1">** Este é apenas um portfólio de teste.<br>
+        Todos os projetos e detalhes foram feitos como aprendizado.
+        <br> Produzido em um celular.
+      </p>
+      <p id="texto2">Criado por Munique Feitoza.</p>
+    </footer>
+
+  <!-- BOOTSTRAP JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+
+</html>
