@@ -18,21 +18,31 @@ body {
   font-size: 12px;
 }
 
+a {
+  color: #000;
+  text-decoration: none;
+}
+
 #welcome-section {
   background-color: rgb(255, 217, 218);
   padding: 50% 20px 80% 20px;
   text-align: center;
-  width: 110%;
+  width: 100%;
 }
 h1 {
   color: rgb(137, 2, 62);
-  font-size: 30px;
+  font-size: 40px;
   padding: 10px 0 20px 0;
 }
 #projects {
+  text-align: center;
   padding: 40px 10px;
   background-color: rgba(48, 52, 63, 20%);
-  width: 110%;
+  width: 100%;
+}
+#seeMore {
+  margin-top: 30px;
+  font-size: 20px;
 }
 .project-tile {
   font-size: 18px;
@@ -41,11 +51,20 @@ h1 {
   padding: 50px 0 50px 0;
 }
 
+#certification {
+  width: 100vw;
+  padding: 3rem;
+  background-color: rgba(255, 217, 218, 50%);
+}
+.linguagens {
+  text-align: center;
+}
+
 #contato {
-  background-color: rgb(255, 217, 218);
+  background-color: rgba(48, 52, 63, 20%);
   padding: 50% 0px;
   text-align: center;
-  width: 110%;
+  width: 100%;
 }
 h2 {
   padding: 40px 0 50px 0;
@@ -95,7 +114,7 @@ footer {
   padding: 20px 20px;
   background-color: rgb(137, 2, 62);
   color: rgb(255, 217, 218);
-  width: 110%;
+  width: 100%;
 }
 #texto1 {
   font-size: 9px;
@@ -105,3 +124,5 @@ footer {
 #texto2 {
   text-align: right;
   font-size: 8px;
+}
+
