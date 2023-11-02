@@ -23,7 +23,7 @@ a {
   padding: 50% 20px 80% 20px;
   text-align: center;
   width: 100%;
-  height: 100%;
+  height: 50%;
   box-shadow: inset 1px 0 10px rgba(20,20,20,50%);
 }
 h1 {
@@ -81,7 +81,6 @@ h2 {
   margin: 0 0 0 22%;
   padding: 100px 5px 20px 5px;
   overflow: right;
-  height: 100%;
   height: 100%;
 }
 #git, #instagram, #gmail, #linkedin {
