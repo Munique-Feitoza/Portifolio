@@ -148,7 +148,7 @@ i {
   margin: 0 0.7rem 0 0;
 }
 
-@media screen and (max-width: 420px) {
+@media (max-width: 768px) {
   
   .btn {
     font-size: 10px;
