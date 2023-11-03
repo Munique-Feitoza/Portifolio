@@ -201,9 +201,17 @@ i {
     margin-bottom: 3rem;
   }
   
+  #contacto h2 {
+    padding: 1rem;
+  }
+  
+  .paragraphContact {
+    font-size: 12px;
+    padding: 0;
+  }
+  
   #contacto {
-    margin-bottom: 3rem;
-    padding: 20% 6%;
+    padding: 0 6%;
   }
   
   #git, #instagram, #gmail, #linkedin {
