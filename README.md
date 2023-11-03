@@ -1,16 +1,9 @@
 # Portifólio
 
-[Web page](https://munique-feitoza.github.io/Portifolio/)
+[See here](https://munique-feitoza.github.io/Portifolio/)
 
-Ainda estou criando ele
-
-Lista de implementação:
-To do | status 
-:----:|:-------:
-Código Bootstrap | ✅
-Decidir cor do portifólio | ❌
-Adicionar certificados | ✅
-Adicionar projetos | ✅
-Adicionar D3.js | ✅
-
-A lista pode aumentar dependendo da necessidade...
+Frameworks | version
+:---------:|:-------:
+Bootstrap | 5.3.2
+Bootstrap icons | 1.11.0
+D3.js | 7.0.0
