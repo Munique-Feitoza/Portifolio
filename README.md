@@ -11,5 +11,6 @@ Código Bootstrap | ✅
 Decidir cor do portifólio | ❌
 Adicionar certificados | ✅
 Adicionar projetos | ✅
+Adicionar D3.js | ✅
 
 A lista pode aumentar dependendo da necessidade...
