@@ -128,7 +128,7 @@ footer {
   background-color: #fff;
   border-radius: 1rem;
   border: 1px solid var(--bs-danger-border-subtle);
-  box-shadow: 0 0 10px var(--bs-danger-bg-subtle);
+  animation: show 10s infinite;
 }
 
 #certification img {
@@ -142,7 +142,7 @@ footer {
 
 .linkContact {
   border-color: #000 !important;
-  box-shadow: 0 0 10px rgba(20, 20, 20, 50%) !important;
+  animation: show 10s infinite;
 }
 
 .linkContact:hover {
@@ -152,19 +152,19 @@ footer {
 .btn,
 .card {
   border-color: var(--bs-danger-border-subtle);
-  box-shadow: 0 0 10px var(--bs-danger-bg-subtle);
+  animation: show 10s infinite;
 }
 
 .btn:hover {
   color: #000;
-  border-color: var(--bs-danger-border-subtle);
+  border: 2px solid var(--bs-danger-border-subtle);
   background: var(--bs-danger-bg-subtle);
 }
 
 .carousel {
   border-radius: 1rem;
   border: 2px solid var(--bs-danger-border-subtle);
-  box-shadow: 0 0 10px var(--bs-danger-bg-subtle);
+  animation: show 10s infinite;
 }
 
 i {
@@ -241,4 +241,11 @@ i {
     padding: 10px 10px;
     font-size: 9px;
   }
+}
+
+@keyframes show {
+  0%{border-color: red; box-shadow: 0 0 10px red;}
+  33%{border-color: green; box-shadow: 0 0 10px green;}
+  66%{border-color: blue; box-shadow: 0 0 10px blue;}
+  100%{border-color: red; box-shadow: 0 0 10px red;}
 }
