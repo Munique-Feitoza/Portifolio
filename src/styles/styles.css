@@ -244,7 +244,10 @@ i {
 
 @keyframes show {
   0%{border-color: red; box-shadow: 0 0 10px red;}
-  33%{border-color: green; box-shadow: 0 0 10px green;}
-  66%{border-color: blue; box-shadow: 0 0 10px blue;}
+  11%{border-color: purple; box-shadow: 0 0 10px purple;}
+  33%{border-color: blue; box-shadow: 0 0 10px blue;}
+  44%{border-color: green; box-shadow: 0 0 10px green;}
+  66%{border-color: yellow; box-shadow: 0 0 10px yellow;}
+  88%{border-color: orange; box-shadow: 0 0 10px orange;}
   100%{border-color: red; box-shadow: 0 0 10px red;}
 }

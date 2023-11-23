@@ -15,11 +15,14 @@
   let sites = d3.range(samples)
     .map(() => [Math.random() * width, Math.random() * height]);
 
-  let voronoi = d3.Delaunay.from(sites).voronoi([-1, -1, width + 1, height + 1]);
+  let voronoi = d3.Delaunay
+  .from(sites)
+  .voronoi([-1, -1, width + 1, height + 1]);
 
   let polygons = svg.selectAll("path")
     .data(voronoi.cellPolygons())
-    .enter().append("path")
+    .enter()
+    .append("path")
     .call(redraw);
 
   function redraw(polygon) {
