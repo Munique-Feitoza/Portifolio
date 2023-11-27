@@ -99,6 +99,7 @@ h2 {
 #linkedin {
   padding: 0.2rem 1rem;
   margin: auto;
+  animation: showText 30s infinite;
 }
 
 footer {
@@ -168,6 +169,11 @@ footer {
 
 i {
   margin: 0 0.7rem 0 0;
+  animation: showText 30s infinite;
+}
+
+.link_contact {
+  animation: showText 30s infinite;
 }
 
 .svg-container {
@@ -265,4 +271,29 @@ i {
   93%{border-color: rgb(189, 17, 129); box-shadow: 0 0 10px rgb(189, 17, 129);}
   97%{border-color: rgb(189, 17, 91); box-shadow: 0 0 10px rgb(189, 17, 91);}
   100%{border-color: rgb(189, 17, 17); box-shadow: 0 0 10px rgb(189, 17, 17);}
+}
+
+@keyframes showText {
+  0%{color: rgb(189, 17, 17);}
+  5%{color: rgb(189, 68, 17);}
+  10%{color: rgb(189, 114, 17);}
+  15%{color: rgb(189, 183, 17);}
+  20%{color: rgb(154, 189, 17);}
+  25%{color: rgb(63, 189, 17);}
+  30%{color: rgb(17, 189, 20);}
+  35%{color: rgb(17, 189, 103);}
+  40%{color: rgb(17, 189, 154);}
+  45%{color: rgb(17, 177, 189);}
+  50%{color: rgb(17, 146, 189);}
+  55%{color: rgb(17, 111, 189);}
+  60%{color: rgb(17, 60, 189);}
+  65%{color: rgb(28, 17, 189);}
+  70%{color: rgb(71, 17, 189);}
+  75%{color: rgb(109, 17, 189);}
+  80%{color: rgb(143, 17, 189);}
+  85%{color: rgb(174, 17, 189);}
+  90%{color: rgb(189, 17, 172);}
+  93%{color: rgb(189, 17, 129);}
+  97%{color: rgb(189, 17, 91);}
+  100%{color: rgb(189, 17, 17);}
 }
