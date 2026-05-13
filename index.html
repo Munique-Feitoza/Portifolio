@@ -1,220 +1,66 @@
 <!doctype html>
-<html lang="en">
-
+<html lang="pt-br">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <!-- BOOTSTRAP CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-
-  <!-- CSS -->
+  <meta name="theme-color" content="#0a3d2a">
+  <meta name="description" content="Munique Feitoza — Junior Developer · Linux / Rust / C / Kotlin · low-level mainboard portfolio">
+  <title>MUNUX MAINBOARD · Munique Feitoza</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=VT323&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./src/styles/styles.css">
-  <title>Portifólio</title>
 </head>
-
 <body>
-  <ul class="nav justify-content-end">
-    <li class="nav-item">
-      <button type="button" class="btn btn-outline-dark linkContact"><a class="nav-link link_contact" aria-current="page" href="#welcome-section">Home</a></button>
-    </li>
-    <li class="nav-item">
-      <button type="button" class="btn btn-outline-dark linkContact"><a class="nav-link link_contact" href="#projects">Projects</a></button>
-    </li>
-    <li class="nav-item">
-      <button type="button" class="btn btn-outline-dark linkContact"><a class="nav-link link_contact" href="#certification">Certification</a></button>
-    </li>
-    <li class="nav-item">
-      <button type="button" class="btn btn-outline-dark linkContact"><a class="nav-link link_contact" href="#contact">Contact</a></button>
-    </li>
-  </ul>
-  <div id="welcome-section">
-    <h1>Munique Feitoza</h1>
-    <p>Front-end developer</p>
-  </div>
-  <div id="projects">
-    <p class="project-tile">These are some of my projects</p>
-    <div class="row row-cols-1 row-cols-md-3 g-4">
-      <div class="col">
-        <div class="card h-100">
-          <img src="./src/images/detona_ralph.jpg" class="card-img-top img-fluid" alt="Detona Ralph game">
-          <div class="card-body">
-            <h5 class="card-title">Detona Ralph</h5>
-            <p class="card-text">Wreck Ralph game where you can lose lives, receive score feedback and running time, accessible only on computer.</p>
-          </div>
-          <a href="https://munique-feitoza.github.io/detona_ralph_aula_dio/" class="btn btn-outline-dark">GitHub Playground</a>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card h-100">
-          <img src="./src/images/map_d3.jpg" class="card-img-top img-fluid" alt="">
-          <div class="card-body">
-            <h5 class="card-title">Choropleth Map</h5>
-            <p class="card-text">A map with data where I used APIs and D3.</p>
-          </div>
-          <a href="https://munique-feitoza.github.io/choropleth_map_using_d3/" class="btn btn-outline-dark">GitHub Playground</a>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card h-100">
-          <img src="./src/images/ping_pong_game.jpg" class="card-img-top img-fluid" alt="Ping pong game">
-          <div class="card-body">
-            <h5 class="card-title">Ping Pong Game</h5>
-            <p class="card-text">The famous ping pong game where you can reminisce about childhood and play with some friend of yours, accessible only on computer.</p>
-          </div>
-          <a href="https://munique-feitoza.github.io/ping_pong_game_in_js/" class="btn btn-outline-dark">GitHub Playground</a>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card h-100">
-          <img src="./src/images/snake_game.jpg" class="card-img-top img-fluid" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Snake Game</h5>
-            <p class="card-text">The famous snake game where you can reminisce childhood, accessible only on computer.</p>
-          </div>
-          <a href="https://munique-feitoza.github.io/game_snake_in_js/" class="btn btn-outline-dark">GitHub Playground</a>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card h-100">
-          <img src="./src/images/memory_game.jpg" class="card-img-top img-fluid" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Memory Game</h5>
-            <p class="card-text">The memory game using animal memes, accessible to mobile and computer.</p>
-          </div>
-          <a href="https://munique-feitoza.github.io/memory_game_in_js_aula_dio/" class="btn btn-outline-dark">GitHub Playground</a>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card h-100">
-          <img src="./src/images/pacman.jpg" class="card-img-top img-fluid" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Pac-Man</h5>
-            <p class="card-text">Pac-Man game using JavaScript, accessible to mobile and computer.</p>
-          </div>
-          <a href="https://munique-feitoza.github.io/pacman_in_js/" class="btn btn-outline-dark">GitHub Playground</a>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card h-100">
-          <img src="./src/images/landing_page.jpg" class="card-img-top img-fluid" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Landing Page</h5>
-            <p class="card-text">You thought you would only have games right? This is a Landing page of a course and I liked it so much that I left it here.</p>
-          </div>
-          <a href="https://munique-feitoza.github.io/trilha-css-desafio-01/" class="btn btn-outline-dark">GitHub Playground</a>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card h-100">
-          <img src="./src/images/pokedex.jpg" class="card-img-top img-fluid" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Pokedex</h5>
-            <p class="card-text">A pokedex, you can find every pokemon here, using API, accessible to mobile and computer.</p>
-          </div>
-          <a href="https://munique-feitoza.github.io/pokedex_in_js/" class="btn btn-outline-dark">GitHub Playground</a>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card h-100">
-          <img src="./src/images/to-do-list-basic.jpg" class="card-img-top img-fluid" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">To Do list</h5>
-            <p class="card-text">A To Do list, using React, accessible only to mobile.</p>
-          </div>
-          <a href="https://munique-feitoza.github.io/to-do-list-basic/" class="btn btn-outline-dark">GitHub Playground</a>
-        </div>
-      </div>
-    </div>
-    <button id="seeMore" class="btn btn-outline-danger"><a href="https://github.com/Munique-Feitoza" id="profile-link" target="_blank">See more -&gt;</a></button>
-  </div>
-  <div id="certification">
-    <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
-      <div class="carousel-indicators">
-        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
-        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
-        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4" aria-label="Slide 5"></button>
-      </div>
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <img src="./src/images/certificados/web-design.jpg" class="d-block w-100" alt="Responsive Web Design">
-        </div>
-        <div class="carousel-item">
-          <img src="./src/images/certificados/javascript.jpg" class="d-block w-100" alt="JavaScript Algorithms and Data Structures">
-        </div>
-        <div class="carousel-item">
-          <img src="./src/images/certificados/libraries.jpg" class="d-block w-100" alt="Front-end Development Libraries">
-        </div>
-        <div class="carousel-item">
-          <img src="./src/images/certificados/games.jpg" class="d-block w-100" alt="Game Development">
-        </div>
-        <div class="carousel-item">
-          <img src="./src/images/certificados/data-visualization.jpg" class="d-block w-100" alt="Data Visualization">
-        </div>
-      </div>
-    </div>
-    <div class="linguagens">
-      <div style="display: inline_block"><br>
-        <img align="center" alt="Munique-Js" height="80" width="80" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-plain.svg" />
-        <img align="center" alt="Munique-HTML" height="80" width="80" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-plain.svg" />
-        <img align="center" alt="Munique-CSS" height="80" width="80" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-plain.svg" />
-      </div>
-      <div style="display: inline_block"><br>
-        <img align="center" alt="Munique-React" height="80" width="80" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original-wordmark.svg" />
-        <img align="center" alt="Munique-jQuery" height="80" width="80" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jquery/jquery-original-wordmark.svg" />
-        <img align="center" alt="Munique-SASS" height="80" width="80" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg" />
-        <img align="center" alt="Munique-Bootstrap" height="80" width="80" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original-wordmark.svg" />
-        <img align="center" alt="Munique-Redux" height="80" width="80" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg" />
-        <img align="center" alt="Munique-D3js" height="80" width="80" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/d3js/d3js-original.svg" />
-      </div>
-      <div style="display: inline_block"><br>
-        <img align="center" alt="Munique-SQLite" height="80" width="80" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqlite/sqlite-original-wordmark.svg" />
-        <img align="center" alt="Munique-MySQL" height="80" width="80" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original-wordmark.svg" />
-      </div>
-    </div>
-  </div>
-  <div id="backgroundSvg">
-    <div id="chart">
-      <div id="contacto">
-        <h2>Let's work together?</h2>
-        <p class="paragraphContact">Which coffee do you like?</p>
-        <section id="contact">
-          <section id="git">
-            <button class="btn linkContact btn-outline-dark">
-              <a href="https://github.com/Munique-Feitoza" class="link_contact"><i class="bi bi-github"></i>GitHub</a>
-            </button>
-          </section>
-          <section id="linkedin">
-            <button class="btn linkContact btn-outline-dark">
-              <a href="https://www.linkedin.com/in/munique-feitoza-77034b231/" class="link_contact"><i class="bi bi-linkedin"></i>LinkedIn</a>
-            </button>
-          </section>
-          <section id="gmail">
-            <button class="btn linkContact btn-outline-dark">
-              <a href="mailto:muniquefeitoz4@gmail.com" class="link_contact"><i class="bi bi-envelope"></i>Gmail</a>
-            </button>
-          </section>
-        </section>
-      </div>
-    </div>
-  </div>
-  <footer>
-    <p id="texto1">
-      Produce by a cellphone.
-    </p>
-    <p id="texto2">Created by Munique Feitoza.</p>
-  </footer>
 
-  <!-- d3 JS -->
-  <script src="res/d3@7.6.1.min.js"></script>
-  <!-- BOOTSTRAP JS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-  <script src="./src/scripts/main.js"></script>
+  <div id="boot" aria-live="polite">
+    <pre id="boot-log"></pre><span id="boot-cursor">█</span>
+  </div>
+
+  <main id="board" aria-hidden="true">
+    <div class="board-frame">
+      <canvas id="pcb"     width="1280" height="800" aria-hidden="true"></canvas>
+      <canvas id="walkers" width="1280" height="800" aria-hidden="true"></canvas>
+      <div id="chips" class="chips-overlay"></div>
+
+      <div class="leds">
+        <span class="led led-power" data-label="PWR"></span>
+        <span class="led led-net"   data-label="NET"></span>
+        <span class="led led-disk"  data-label="HDD"></span>
+        <span class="led led-debug" data-label="DBG"></span>
+      </div>
+
+      <div class="scanlines" aria-hidden="true"></div>
+      <div class="vignette"  aria-hidden="true"></div>
+    </div>
+
+    <footer class="silk-footer">
+      <span>MUNUX MAINBOARD v1.0</span>
+      <span>SN:0xMUNIQ · ASSEMBLED IN BR · 2026</span>
+    </footer>
+  </main>
+
+  <dialog id="datasheet" aria-labelledby="ds-title">
+    <article class="ds-frame">
+      <header class="ds-head">
+        <div class="ds-id">
+          <div class="ds-part" id="ds-part">IC-000</div>
+          <h2 id="ds-title" class="ds-name">PROJECT</h2>
+          <div class="ds-sub" id="ds-sub">subtitle</div>
+        </div>
+        <button class="ds-close" id="ds-close" aria-label="fechar datasheet" type="button">▮ CLOSE</button>
+      </header>
+      <div class="ds-divider" aria-hidden="true"></div>
+      <p class="ds-desc" id="ds-desc"></p>
+      <div class="ds-stack" id="ds-stack" aria-label="stack"></div>
+      <div class="ds-contacts" id="ds-contacts" hidden></div>
+      <footer class="ds-foot">
+        <a class="ds-link" id="ds-link" href="#" target="_blank" rel="noopener noreferrer">OPEN REPO →</a>
+        <div class="ds-meta">REV 1.0 · MUNUX</div>
+      </footer>
+    </article>
+  </dialog>
+
+  <script src="./src/scripts/main.js" defer></script>
 </body>
-
 </html>
