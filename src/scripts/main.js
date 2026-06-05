@@ -72,16 +72,16 @@ const CHIPS = [
   {
     id: 'munux-books',
     name: 'MUNUX-BOOKS',
-    sub:  'docs · markdown',
+    sub:  'ebook reader · Kotlin',
     part: 'IC-002 · v0.1',
     x: 940, y: 130, w: 260, h: 160,
     pins: 'left',
     url:  'https://github.com/Munique-Feitoza/Munux-Books',
     description: {
-      pt: 'Livros técnicos e guias do ecossistema Munux — documentação escrita em Markdown e construída com mdBook, agora publicada no GitHub.',
-      en: 'Technical books and guides for the Munux ecosystem — documentation written in Markdown and built with mdBook, now published on GitHub.',
+      pt: 'Leitor de EPUB e PDF para Android (Kotlin + Jetpack Compose), com foco em leitura confortável — tipografia ajustável, três temas, paginação com encaixe e memória de posição. Tem tradução automática de capítulos opcional, usando o provedor e a chave de API que você escolher.',
+      en: 'EPUB and PDF reader for Android (Kotlin + Jetpack Compose), focused on comfortable reading — adjustable typography, three themes, snap pagination and reading-position memory. Includes optional automatic chapter translation using the provider and API key you choose.',
     },
-    stack: ['Markdown', 'mdBook', 'Docs'],
+    stack: ['Kotlin', 'Jetpack Compose', 'Android', 'EPUB/PDF'],
   },
   {
     id: 'reactive-workspace',

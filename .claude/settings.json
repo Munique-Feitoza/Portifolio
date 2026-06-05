@@ -7,7 +7,11 @@
       "Bash(git --no-pager diff --stat)",
       "Bash(git add *)",
       "Bash(git commit -q -m 'Conecta Munux-Books ao GitHub e deixa os resumos bilíngues \\(pt-br/en\\) *)",
-      "Bash(git --no-pager log --oneline -1)"
+      "Bash(git --no-pager log --oneline -1)",
+      "Bash(git push *)",
+      "Bash(gh api *)",
+      "Bash(python3 -c \"import sys,json; [print\\(x['type'],x['name']\\) for x in json.load\\(sys.stdin\\)]\")",
+      "Bash(git commit -q -m 'Corrige a descrição do Munux-Books: leitor de EPUB/PDF para Android *)"
     ]
   }
 }

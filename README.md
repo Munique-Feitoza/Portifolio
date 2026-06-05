@@ -74,7 +74,7 @@ flowchart TD
 | [server-controller](https://github.com/Munique-Feitoza/server-controller) | Kotlin · Coroutines · SSH | Orquestrador remoto de servidores |
 | [slack-tracker](https://github.com/Munique-Feitoza/slack-tracker) | Rust · Slack API · WebSockets | Observer de atividade Slack |
 | [Stellar-Narrators](https://github.com/pancakehoneyb/Stellar-Narrators) | HTML · CSS · JS · NASA APIs | Team de 5 mulheres — NASA Space Apps Challenge |
-| [Munux-Books](https://github.com/Munique-Feitoza/Munux-Books) | Markdown · mdBook | Documentação técnica do ecossistema Munux |
+| [Munux-Books](https://github.com/Munique-Feitoza/Munux-Books) | Kotlin · Compose · Android | Leitor de EPUB/PDF com tradução automática de capítulos |
 
 ---
 
@@ -87,7 +87,7 @@ Cada chip tem um bonequinho dedicado caminhando pela sua trilha, carregando caix
 | **Tux** (pinguim) | CPU ↔ MUNUX | 55 px/s | syscalls Linux |
 | **Ferris** (caranguejo) | CPU ↔ REACTIVE-WS | 70 px/s | crates Rust |
 | **Hooded** (encapuzado) | CPU ↔ OBSCURA | 35 px/s | pacotes ocultos |
-| **Book** (livro com pernas) | CPU ↔ MUNUX-BOOKS | 40 px/s | páginas Markdown |
+| **Book** (livro com pernas) | CPU ↔ MUNUX-BOOKS | 40 px/s | capítulos EPUB/PDF |
 | **Rocket** (foguete) | CPU ↔ STELLAR | 90 px/s | dados estelares |
 | **Droid** (robozinho) | CPU ↔ SERVER-CTRL | 50 px/s | containers Kotlin |
 | **Postman** (carteiro) | CPU ↔ SLACK-TRACKER | 60 px/s | eventos Slack |
