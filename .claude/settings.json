@@ -11,7 +11,8 @@
       "Bash(git push *)",
       "Bash(gh api *)",
       "Bash(python3 -c \"import sys,json; [print\\(x['type'],x['name']\\) for x in json.load\\(sys.stdin\\)]\")",
-      "Bash(git commit -q -m 'Corrige a descrição do Munux-Books: leitor de EPUB/PDF para Android *)"
+      "Bash(git commit -q -m 'Corrige a descrição do Munux-Books: leitor de EPUB/PDF para Android *)",
+      "Bash(git commit -q -m 'Corrige os resumos dos projetos com base na documentação real de cada repo *)"
     ]
   }
 }

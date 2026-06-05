@@ -68,13 +68,13 @@ flowchart TD
 
 | Chip | Stack | Resumo |
 |------|-------|--------|
-| [MUNUX](https://github.com/Munique-Feitoza/Munux) | C · Linux Kernel · Bash | Distro Linux didática (do básico ao avançado) |
-| [Munux-Reactive-Workspace](https://github.com/Munique-Feitoza/Munux-Reactive-Workspace) | Rust | Compositor reativo experimental |
-| [Obscura](https://github.com/Munique-Feitoza/Obscura) | Rust | Stealth & anti-fingerprint toolkit |
-| [server-controller](https://github.com/Munique-Feitoza/server-controller) | Kotlin · Coroutines · SSH | Orquestrador remoto de servidores |
-| [slack-tracker](https://github.com/Munique-Feitoza/slack-tracker) | Rust · Slack API · WebSockets | Observer de atividade Slack |
+| [MUNUX](https://github.com/Munique-Feitoza/Munux) | C · Assembly · Rust | OS educacional feito do zero, com kernel próprio (x86) |
+| [Munux-Reactive-Workspace](https://github.com/Munique-Feitoza/Munux-Reactive-Workspace) | Rust · Ratatui | Terminal gamificado para Linux (XP, níveis, missões) |
+| [Obscura](https://github.com/Munique-Feitoza/Obscura) | Rust | Sentinela de segurança Linux (daemon inotify + análise de ELF) |
+| [server-controller](https://github.com/Munique-Feitoza/server-controller) | Rust · Kotlin · Android | Pocket NOC — agente Rust + app Android de monitoramento |
+| [slack-tracker](https://github.com/Munique-Feitoza/slack-tracker) | Rust · X11 · LLM | Resume seu dia (janela + Git + LLM) na Slack List |
 | [Stellar-Narrators](https://github.com/pancakehoneyb/Stellar-Narrators) | HTML · CSS · JS · NASA APIs | Team de 5 mulheres — NASA Space Apps Challenge |
-| [Munux-Books](https://github.com/Munique-Feitoza/Munux-Books) | Kotlin · Compose · Android | Leitor de EPUB/PDF com tradução automática de capítulos |
+| [Munux-Books](https://github.com/Munique-Feitoza/Munux-Books) | Kotlin · Compose · Android | App Android pra ler e traduzir livros (EPUB/PDF) |
 
 ---
 
@@ -86,11 +86,11 @@ Cada chip tem um bonequinho dedicado caminhando pela sua trilha, carregando caix
 |--------|--------|-----------|-------------|
 | **Tux** (pinguim) | CPU ↔ MUNUX | 55 px/s | syscalls Linux |
 | **Ferris** (caranguejo) | CPU ↔ REACTIVE-WS | 70 px/s | crates Rust |
-| **Hooded** (encapuzado) | CPU ↔ OBSCURA | 35 px/s | pacotes ocultos |
-| **Book** (livro com pernas) | CPU ↔ MUNUX-BOOKS | 40 px/s | capítulos EPUB/PDF |
+| **Hooded** (encapuzado) | CPU ↔ OBSCURA | 35 px/s | binários inspecionados |
+| **Book** (livro com pernas) | CPU ↔ MUNUX-BOOKS | 40 px/s | capítulos traduzidos |
 | **Rocket** (foguete) | CPU ↔ STELLAR | 90 px/s | dados estelares |
-| **Droid** (robozinho) | CPU ↔ SERVER-CTRL | 50 px/s | containers Kotlin |
-| **Postman** (carteiro) | CPU ↔ SLACK-TRACKER | 60 px/s | eventos Slack |
+| **Droid** (robozinho) | CPU ↔ SERVER-CTRL | 50 px/s | métricas dos servidores |
+| **Postman** (carteiro) | CPU ↔ SLACK-TRACKER | 60 px/s | resumo do dia |
 | **Bus** (ônibus amarelo) | CPU ↔ RAM (8 lanes) | 100 px/s | tokens LLM (Ollama) |
 
 Os walkers entram em cena com **staggers desfasados** (0–2400ms) pra não andarem em uníssono.
