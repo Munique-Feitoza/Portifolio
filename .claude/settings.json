@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git submodule *)",
+      "Bash(gh repo *)",
+      "Bash(node --check src/scripts/main.js)",
+      "Bash(git --no-pager diff --stat)",
+      "Bash(git add *)",
+      "Bash(git commit -q -m 'Conecta Munux-Books ao GitHub e deixa os resumos bilíngues \\(pt-br/en\\) *)",
+      "Bash(git --no-pager log --oneline -1)"
+    ]
+  }
+}

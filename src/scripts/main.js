@@ -33,7 +33,10 @@ const CPU = {
   part: 'ads.grad · 2026.05 · rust/c/kotlin/linux',
   x: 460, y: 300, w: 360, h: 200,
   chamfer: 14,
-  description: 'Junior Developer graduating in Systems Analysis & Development (ADS) this month (May 2026). Low-level focus: Linux distros, systems software in Rust and C, JVM automation in Kotlin. Builder by default — when something doesn’t exist or breaks, I write it from scratch.',
+  description: {
+    pt: 'Desenvolvedora Júnior formando em Análise e Desenvolvimento de Sistemas (ADS) este mês (maio/2026). Foco low-level: distros Linux, software de sistema em Rust e C, automação JVM em Kotlin. Construtora por padrão — quando algo não existe ou quebra, eu escrevo do zero.',
+    en: 'Junior Developer graduating in Systems Analysis & Development (ADS) this month (May 2026). Low-level focus: Linux distros, systems software in Rust and C, JVM automation in Kotlin. Builder by default — when something doesn’t exist or breaks, I write it from scratch.',
+  },
   stack: ['Rust', 'C', 'Kotlin', 'Linux', 'JS/TS', 'Bash', 'Git'],
 };
 
@@ -44,7 +47,10 @@ const RAM = {
   sub:  'co-processor · 8GB',
   part: 'M-OLLAMA-01',
   x: 380, y: 40, w: 520, h: 70,
-  description: 'Large-language models running 100% locally via Ollama — internal company code and data never leave my hardware. Self-hosted inference for sensitive workloads, with model choice tuned per task (reasoning vs. speed).',
+  description: {
+    pt: 'Modelos de linguagem rodando 100% localmente via Ollama — código e dados internos da empresa nunca saem do meu hardware. Inferência self-hosted para cargas sensíveis, com escolha de modelo ajustada por tarefa (raciocínio vs. velocidade).',
+    en: 'Large-language models running 100% locally via Ollama — internal company code and data never leave my hardware. Self-hosted inference for sensitive workloads, with model choice tuned per task (reasoning vs. speed).',
+  },
   stack: ['Ollama', 'Llama', 'Mistral', 'Local-first AI'],
 };
 
@@ -57,18 +63,24 @@ const CHIPS = [
     x: 80, y: 130, w: 260, h: 160,
     pins: 'right',
     url:  'https://github.com/Munique-Feitoza/Munux',
-    description: 'A Linux distribution that guides the user from beginner to advanced level, with focus on gradual learning and full autonomy. Built from the ground up with custom init and learning-oriented tooling.',
+    description: {
+      pt: 'Uma distribuição Linux que guia o usuário do nível iniciante ao avançado, com foco em aprendizado gradual e autonomia total. Construída do zero, com init próprio e ferramentas voltadas ao aprendizado.',
+      en: 'A Linux distribution that guides the user from beginner to advanced level, with focus on gradual learning and full autonomy. Built from the ground up with custom init and learning-oriented tooling.',
+    },
     stack: ['C', 'Linux Kernel', 'Bash', 'Init Systems'],
   },
   {
     id: 'munux-books',
     name: 'MUNUX-BOOKS',
     sub:  'docs · markdown',
-    part: 'IC-002 · local',
+    part: 'IC-002 · v0.1',
     x: 940, y: 130, w: 260, h: 160,
     pins: 'left',
-    url:  '#',
-    description: 'Technical books and guides for the Munux ecosystem. Currently in local development — will be published on GitHub soon.',
+    url:  'https://github.com/Munique-Feitoza/Munux-Books',
+    description: {
+      pt: 'Livros técnicos e guias do ecossistema Munux — documentação escrita em Markdown e construída com mdBook, agora publicada no GitHub.',
+      en: 'Technical books and guides for the Munux ecosystem — documentation written in Markdown and built with mdBook, now published on GitHub.',
+    },
     stack: ['Markdown', 'mdBook', 'Docs'],
   },
   {
@@ -79,7 +91,10 @@ const CHIPS = [
     x: 70, y: 330, w: 240, h: 140,
     pins: 'right',
     url:  'https://github.com/Munique-Feitoza/Munux-Reactive-Workspace',
-    description: 'Experimental reactive window workspace — a Rust-based compositor exploring dynamic layouts and reactive UI primitives at the window-manager layer.',
+    description: {
+      pt: 'Workspace de janelas reativo e experimental — um compositor em Rust explorando layouts dinâmicos e primitivas de UI reativa na camada do gerenciador de janelas.',
+      en: 'Experimental reactive window workspace — a Rust-based compositor exploring dynamic layouts and reactive UI primitives at the window-manager layer.',
+    },
     stack: ['Rust', 'Compositor', 'Reactive UI'],
   },
   {
@@ -90,7 +105,10 @@ const CHIPS = [
     x: 970, y: 330, w: 240, h: 140,
     pins: 'left',
     url:  'https://github.com/pancakehoneyb/Stellar-Narrators',
-    description: 'A team of five young women passionate about science and technology. We blend coding, design and creativity to build an innovative, intuitive and magical solution for NASA’s Space Apps Challenge.',
+    description: {
+      pt: 'Um time de cinco jovens mulheres apaixonadas por ciência e tecnologia. Misturamos código, design e criatividade para construir uma solução inovadora, intuitiva e mágica para o NASA Space Apps Challenge.',
+      en: 'A team of five young women passionate about science and technology. We blend coding, design and creativity to build an innovative, intuitive and magical solution for NASA’s Space Apps Challenge.',
+    },
     stack: ['HTML', 'CSS', 'JavaScript', 'NASA APIs'],
   },
   {
@@ -101,7 +119,10 @@ const CHIPS = [
     x: 70, y: 520, w: 240, h: 150,
     pins: 'right',
     url:  'https://github.com/Munique-Feitoza/Obscura',
-    description: 'Experimental stealth & anti-fingerprint toolkit in Rust — focused on privacy and surface obfuscation against passive network observers.',
+    description: {
+      pt: 'Toolkit experimental de stealth e anti-fingerprint em Rust — focado em privacidade e ofuscação de superfície contra observadores passivos de rede.',
+      en: 'Experimental stealth & anti-fingerprint toolkit in Rust — focused on privacy and surface obfuscation against passive network observers.',
+    },
     stack: ['Rust', 'Crypto', 'Network', 'Privacy'],
   },
   {
@@ -112,7 +133,10 @@ const CHIPS = [
     x: 970, y: 520, w: 240, h: 150,
     pins: 'left',
     url:  'https://github.com/Munique-Feitoza/server-controller',
-    description: 'Remote server orchestrator with a Kotlin client — manages deploy lifecycle, monitoring and SSH automation for fleets of self-hosted services.',
+    description: {
+      pt: 'Orquestrador remoto de servidores com cliente em Kotlin — gerencia ciclo de deploy, monitoramento e automação SSH para frotas de serviços self-hosted.',
+      en: 'Remote server orchestrator with a Kotlin client — manages deploy lifecycle, monitoring and SSH automation for fleets of self-hosted services.',
+    },
     stack: ['Kotlin', 'Coroutines', 'SSH', 'Orchestration'],
   },
   {
@@ -123,7 +147,10 @@ const CHIPS = [
     x: 510, y: 600, w: 260, h: 120,
     pins: 'top',
     url:  'https://github.com/Munique-Feitoza/slack-tracker',
-    description: 'Slack workspace observer in Rust — tracks events in real time via WebSockets and produces structured activity reports.',
+    description: {
+      pt: 'Observador de workspace Slack em Rust — acompanha eventos em tempo real via WebSockets e produz relatórios de atividade estruturados.',
+      en: 'Slack workspace observer in Rust — tracks events in real time via WebSockets and produces structured activity reports.',
+    },
     stack: ['Rust', 'Slack API', 'WebSockets', 'JSON'],
   },
 ];
@@ -133,7 +160,10 @@ const CONTACT = {
   name: 'J1 · DEBUG PORT',
   sub:  'contact header · 115200 baud',
   part: 'OPEN HEADER',
-  description: 'Quer falar comigo? Cada pino do header tem seu protocolo — escolhe o canal abaixo.',
+  description: {
+    pt: 'Quer falar comigo? Cada pino do header tem seu protocolo — escolhe o canal abaixo.',
+    en: 'Want to reach me? Each header pin has its own protocol — pick a channel below.',
+  },
   contacts: [
     { label: 'GH',  protocol: 'github',   value: 'github.com/Munique-Feitoza',                 href: 'https://github.com/Munique-Feitoza' },
     { label: 'IN',  protocol: 'linkedin', value: 'linkedin.com/in/munique-feitoza-77034b231',  href: 'https://www.linkedin.com/in/munique-feitoza-77034b231/' },
@@ -1477,6 +1507,27 @@ function buildOverlay() {
  *  Datasheet panel (fase 5)
  * ──────────────────────────────────────────────────────────────────────── */
 
+/* Renders a datasheet description that is either a plain string (legacy)
+ * or a bilingual { pt, en } object, each language tagged. Uses textContent /
+ * createTextNode only — no innerHTML — so the data can never inject markup. */
+function renderDescription(el, desc) {
+  el.textContent = '';
+  if (!desc) return;
+  if (typeof desc === 'string') { el.textContent = desc; return; }
+
+  const LANGS = [['PT-BR', desc.pt], ['EN', desc.en]];
+  for (const [lang, text] of LANGS) {
+    if (!text) continue;
+    const block = document.createElement('span');
+    block.className = 'ds-desc-block';
+    const tag = document.createElement('span');
+    tag.className = 'ds-lang';
+    tag.textContent = lang;
+    block.append(tag, document.createTextNode(text));
+    el.appendChild(block);
+  }
+}
+
 function showDatasheet(chip) {
   const dialog   = document.getElementById('datasheet');
   const partEl   = document.getElementById('ds-part');
@@ -1490,7 +1541,7 @@ function showDatasheet(chip) {
   partEl.textContent  = chip.part || '';
   titleEl.textContent = chip.name;
   subEl.textContent   = chip.sub || '';
-  descEl.textContent  = chip.description || '';
+  renderDescription(descEl, chip.description);
 
   stackEl.innerHTML = '';
   for (const s of (chip.stack || [])) {

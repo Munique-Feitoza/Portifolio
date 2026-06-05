@@ -74,7 +74,7 @@ flowchart TD
 | [server-controller](https://github.com/Munique-Feitoza/server-controller) | Kotlin · Coroutines · SSH | Orquestrador remoto de servidores |
 | [slack-tracker](https://github.com/Munique-Feitoza/slack-tracker) | Rust · Slack API · WebSockets | Observer de atividade Slack |
 | [Stellar-Narrators](https://github.com/pancakehoneyb/Stellar-Narrators) | HTML · CSS · JS · NASA APIs | Team de 5 mulheres — NASA Space Apps Challenge |
-| Munux-Books | Markdown · mdBook | Documentação Munux (local, em breve no GH) |
+| [Munux-Books](https://github.com/Munique-Feitoza/Munux-Books) | Markdown · mdBook | Documentação técnica do ecossistema Munux |
 
 ---
 
