@@ -137,12 +137,12 @@ const CHIPS = [
       pt: 'Pocket NOC — um centro de operações de rede no bolso. Solução completa de monitoramento, segurança e gestão de infraestrutura: um agente em Rust rodando nos servidores (< 15 MB de RAM, < 0,5% de CPU) somado a um app Android nativo em Kotlin/Jetpack Compose para controle remoto em tempo real.',
       en: 'Pocket NOC — a network operations center in your pocket. A complete monitoring, security and infrastructure-management solution: a Rust agent running on the servers (< 15 MB RAM, < 0.5% CPU) paired with a native Android app in Kotlin/Jetpack Compose for real-time remote control.',
     },
-    stack: ['Rust', 'Kotlin', 'Jetpack Compose', 'Android'],
+    stack: ['Rust', 'Kotlin', 'Jetpack Compose', 'Android', 'Linux SysAdmin'],
   },
   {
     id: 'slack-tracker',
     name: 'SLACK-TRACKER',
-    sub:  'work tracker · Rust',
+    sub:  'work tracker · Rust+LLM',
     part: 'IC-007 · v0.1',
     x: 510, y: 600, w: 260, h: 120,
     pins: 'top',
@@ -152,6 +152,34 @@ const CHIPS = [
       en: 'Rust daemon that tracks my work routine on Linux/X11: it watches the active window, figures out which project I am on, combines the day\'s Git activity and generates an LLM summary (local Ollama, Claude or OpenAI) to automatically update my Slack List every day at 5pm — without me having to stop and write "what I did today".',
     },
     stack: ['Rust', 'X11', 'LLM', 'Slack API'],
+  },
+  {
+    id: 'asm-calc',
+    name: 'ASM-CALC',
+    sub:  'assembly x86_64',
+    part: 'IC-008 · low-level',
+    x: 320, y: 600, w: 170, h: 120,
+    pins: 'top',
+    url:  'https://github.com/Munique-Feitoza/Calculadora-em-Assembly-x86_64',
+    description: {
+      pt: 'Calculadora aritmética desenvolvida diretamente em puro Assembly x86_64 com Linux syscalls nativas, manipulação direta de registradores e parsing de inteiros na memória sem runtime ou biblioteca padrão C.',
+      en: 'Arithmetic calculator built in pure x86_64 Assembly using raw Linux syscalls, direct register management and custom integer parsing in memory without any C standard library runtime.',
+    },
+    stack: ['Assembly x86_64', 'Linux Syscalls', 'Registers', 'Low-level'],
+  },
+  {
+    id: 'java-bank',
+    name: 'JAVA-CORE',
+    sub:  'banking system · Java',
+    part: 'IC-009 · OOP',
+    x: 790, y: 600, w: 160, h: 120,
+    pins: 'top',
+    url:  'https://github.com/Munique-Feitoza/sistema_bancario_em_java',
+    description: {
+      pt: 'Sistema bancário orientado a objetos em Java puro com modelagem completa de contas, transferências concorrentes, validação transacional e tratamento robusto de exceções.',
+      en: 'Object-oriented core banking system in pure Java featuring account domain modeling, transactional safety, concurrent transfers and robust exception handling.',
+    },
+    stack: ['Java', 'OOP', 'Software Architecture', 'Data Validation'],
   },
 ];
 
@@ -1503,6 +1531,53 @@ function buildOverlay() {
     row.appendChild(a);
   }
   container.appendChild(row);
+
+  /* Renderizar lista de projetos para telas mobile / toque */
+  renderMobileProjects();
+}
+
+function renderMobileProjects() {
+  const mobileList = document.getElementById('mobile-chips-list');
+  if (!mobileList) return;
+  mobileList.innerHTML = '';
+
+  const header = document.createElement('div');
+  header.className = 'mobile-list-header';
+  header.innerHTML = `
+    <div class="mobile-list-title">▮ COMPONENTES & PROJETOS DA MAINBOARD</div>
+    <div class="mobile-list-sub">Toque em qualquer componente para abrir a folha de especificações (Datasheet):</div>
+  `;
+  mobileList.appendChild(header);
+
+  const allItems = [CPU, RAM, ...CHIPS, CONTACT];
+  const grid = document.createElement('div');
+  grid.className = 'mobile-chips-grid';
+
+  for (const item of allItems) {
+    const card = document.createElement('button');
+    card.type = 'button';
+    card.className = 'mobile-chip-card ' + (item.cls || '');
+    
+    let tagsHtml = '';
+    if (item.stack) {
+      tagsHtml = `<div class="mobile-chip-tags">${item.stack.map(s => `<span class="mobile-chip-tag">${s}</span>`).join('')}</div>`;
+    }
+
+    card.innerHTML = `
+      <div class="mobile-chip-top">
+        <span class="mobile-chip-part">${item.part || 'IC'}</span>
+        <span class="mobile-chip-arrow">INSPECT ↗</span>
+      </div>
+      <div class="mobile-chip-name">${item.name}</div>
+      <div class="mobile-chip-sub">${item.sub || ''}</div>
+      ${tagsHtml}
+    `;
+
+    card.addEventListener('click', () => showDatasheet(item));
+    grid.appendChild(card);
+  }
+
+  mobileList.appendChild(grid);
 }
 
 /* ────────────────────────────────────────────────────────────────────────

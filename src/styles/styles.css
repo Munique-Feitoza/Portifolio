@@ -743,3 +743,161 @@ html, body {
 @media (max-width: 640px) {
   .silk-contact-row { font-size: 8px; gap: 0.4rem 0.9rem; }
 }
+
+/* ──────────────────────────────────────────────────────────────────────── */
+/*  MOBILE OPTIMIZATION — visualização dos componentes para celular        */
+/* ──────────────────────────────────────────────────────────────────────── */
+
+.mobile-chips-container {
+  display: none;
+  width: 100%;
+  max-width: 600px;
+  padding: 1.5rem 1rem 3rem;
+  margin: 0 auto;
+}
+
+.mobile-list-header {
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.mobile-list-title {
+  color: var(--amber-bright);
+  font-size: 13px;
+  letter-spacing: 0.12em;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.mobile-list-sub {
+  color: var(--silk-dim);
+  font-size: 10px;
+  letter-spacing: 0.05em;
+}
+
+.mobile-chips-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.mobile-chip-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  background: var(--chip-body);
+  border: 1px solid var(--copper-dim);
+  border-radius: 8px;
+  padding: 12px 14px;
+  color: var(--silk);
+  font-family: var(--font-mono);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+}
+
+.mobile-chip-card:hover,
+.mobile-chip-card:active {
+  border-color: var(--amber);
+  background: #1e1e16;
+  box-shadow: 0 0 15px rgba(255,176,0,0.3);
+  transform: translateY(-2px);
+}
+
+.mobile-chip-top {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 4px;
+}
+
+.mobile-chip-part {
+  font-size: 9px;
+  color: var(--copper);
+  letter-spacing: 0.15em;
+}
+
+.mobile-chip-arrow {
+  font-size: 9px;
+  color: var(--amber);
+  letter-spacing: 0.1em;
+  font-weight: 700;
+}
+
+.mobile-chip-name {
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: var(--silk);
+  margin-bottom: 2px;
+}
+
+.mobile-chip-card.cpu .mobile-chip-name {
+  color: var(--amber-bright);
+}
+
+.mobile-chip-card.ram .mobile-chip-name {
+  color: var(--led-blue);
+}
+
+.mobile-chip-sub {
+  font-size: 11px;
+  color: var(--silk-dim);
+  margin-bottom: 8px;
+}
+
+.mobile-chip-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.mobile-chip-tag {
+  background: rgba(212,168,87,0.1);
+  border: 1px solid var(--copper-dim);
+  color: var(--copper-bright);
+  font-size: 8.5px;
+  padding: 2px 6px;
+  border-radius: 3px;
+  letter-spacing: 0.05em;
+}
+
+/* Modificações globais em telas móveis */
+@media (max-width: 768px) {
+  html, body {
+    overflow-y: auto !important;
+    overflow-x: hidden;
+    height: auto;
+    min-height: 100%;
+  }
+
+  #board {
+    position: relative;
+    inset: auto;
+    min-height: 100vh;
+    padding: 1rem 0.5rem;
+    justify-content: flex-start;
+  }
+
+  .board-frame {
+    width: 98vw;
+    margin-top: 0.5rem;
+  }
+
+  .mobile-chips-container {
+    display: block;
+  }
+
+  .silk-footer {
+    padding: 1.5rem 0 2rem;
+  }
+
+  .silk-contact-row {
+    position: static;
+    margin-top: 1rem;
+    justify-content: center;
+  }
+}
