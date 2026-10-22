@@ -357,28 +357,122 @@ html, body {
 
 .silk-footer {
   position: fixed;
-  bottom: 6px;
+  bottom: 0;
   left: 0;
   right: 0;
   display: flex;
+  align-items: center;
   justify-content: space-between;
-  padding: 0 3vw;
-  font-size: 10px;
-  color: var(--copper);
-  opacity: 0.55;
-  letter-spacing: 0.18em;
-  pointer-events: none;
+  padding: 8px 24px;
+  background: rgba(6, 24, 18, 0.94);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-top: 1px solid rgba(212, 168, 87, 0.3);
   font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  z-index: 50;
+  box-shadow: 0 -4px 16px rgba(0, 0, 0, 0.6);
+  pointer-events: auto;
 }
 
-@media (max-width: 768px) {
-  .silk-footer { font-size: 8px; padding: 0 2vw; }
-  .leds { gap: 10px; }
-  .led::after { font-size: 7px; }
+.footer-left {
+  display: flex;
+  align-items: center;
+  gap: 16px;
 }
 
-@media (max-width: 480px) {
-  .silk-footer span:last-child { display: none; }
+.board-badge {
+  color: var(--copper);
+  font-weight: 700;
+  letter-spacing: 0.14em;
+}
+
+.footer-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  background: rgba(212, 168, 87, 0.14);
+  border: 1px solid var(--copper);
+  color: var(--amber-bright);
+  font-family: var(--font-mono);
+  font-size: 10px;
+  padding: 4px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 150ms ease;
+  letter-spacing: 0.06em;
+}
+
+.footer-btn:hover {
+  background: rgba(212, 168, 87, 0.28);
+  box-shadow: 0 0 10px rgba(255, 176, 0, 0.4);
+  transform: translateY(-1px);
+}
+
+.pulse-led {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--led-green);
+  box-shadow: 0 0 8px var(--led-green);
+  animation: pulse-glow 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse-glow {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.4; transform: scale(0.85); }
+}
+
+.footer-links {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.footer-link {
+  color: var(--silk-dim);
+  text-decoration: none;
+  font-size: 10px;
+  padding: 2px 6px;
+  border-radius: 3px;
+  transition: color 150ms ease, background 150ms ease, text-shadow 150ms ease;
+}
+
+.footer-link:hover {
+  color: var(--amber-bright);
+  background: rgba(255, 176, 0, 0.1);
+  text-shadow: 0 0 8px var(--amber);
+}
+
+.footer-right {
+  display: flex;
+  align-items: center;
+}
+
+.footer-sn {
+  color: var(--copper-dim);
+  font-size: 9px;
+  letter-spacing: 0.12em;
+}
+
+@media (max-width: 900px) {
+  .silk-footer { padding: 6px 14px; font-size: 9px; }
+  .footer-links { gap: 8px; }
+  .board-badge { display: none; }
+}
+
+@media (max-width: 640px) {
+  .silk-footer {
+    position: relative;
+    flex-direction: column;
+    gap: 8px;
+    padding: 12px;
+    margin-top: 1rem;
+  }
+  .footer-left { width: 100%; justify-content: center; }
+  .footer-links { width: 100%; justify-content: center; flex-wrap: wrap; gap: 6px 10px; }
+  .footer-right { display: none; }
 }
 
 /* ──────────────────────────────────────────────────────────────────────── */
@@ -687,62 +781,7 @@ html, body {
   outline: none;
 }
 
-/* ──────────────────────────────────────────────────────────────────────── */
-/*  Silk-screen contact links at the bottom of the board                    */
-/* ──────────────────────────────────────────────────────────────────────── */
 
-.silk-contact-row {
-  position: absolute;
-  bottom: 1.4%;
-  left: 4.5%;
-  right: 4.5%;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.75rem 1.4rem;
-  font-family: var(--font-mono);
-  font-size: clamp(8px, 0.72vw, 11px);
-  letter-spacing: 0.06em;
-  pointer-events: none;
-}
-
-.silk-contact {
-  color: var(--silk-dim);
-  text-decoration: none;
-  pointer-events: auto;
-  cursor: pointer;
-  transition: color 150ms ease, text-shadow 150ms ease, transform 150ms ease;
-  white-space: nowrap;
-}
-
-.silk-contact::before {
-  content: '';
-  display: inline-block;
-  width: 5px;
-  height: 5px;
-  border-radius: 50%;
-  background: var(--solder);
-  margin-right: 6px;
-  vertical-align: middle;
-  transform: translateY(-1px);
-  box-shadow: 0 0 0 1px rgba(0,0,0,0.6);
-}
-
-.silk-contact:hover,
-.silk-contact:focus-visible {
-  color: var(--amber-bright);
-  text-shadow: 0 0 10px var(--amber), 0 0 1px var(--amber-bright);
-  outline: none;
-}
-
-.silk-contact:hover::before,
-.silk-contact:focus-visible::before {
-  background: var(--led-green);
-  box-shadow: 0 0 6px var(--led-green), 0 0 0 1px rgba(0,0,0,0.6);
-}
-
-@media (max-width: 640px) {
-  .silk-contact-row { font-size: 8px; gap: 0.4rem 0.9rem; }
-}
 
 /* ──────────────────────────────────────────────────────────────────────── */
 /*  MOBILE OPTIMIZATION — visualização dos componentes para celular        */
@@ -893,11 +932,5 @@ html, body {
 
   .silk-footer {
     padding: 1.5rem 0 2rem;
-  }
-
-  .silk-contact-row {
-    position: static;
-    margin-top: 1rem;
-    justify-content: center;
   }
 }

@@ -116,7 +116,7 @@ const CHIPS = [
     name: 'OBSCURA',
     sub:  'security sentinel · Rust',
     part: 'IC-005 · v0.1',
-    x: 75, y: 540, w: 265, h: 155,
+    x: 75, y: 535, w: 265, h: 140,
     pins: 'right',
     url:  'https://github.com/Munique-Feitoza/Obscura',
     description: {
@@ -130,7 +130,7 @@ const CHIPS = [
     name: 'SLACK-TRACKER',
     sub:  'work tracker · Rust+LLM',
     part: 'IC-006 · v0.1',
-    x: 940, y: 540, w: 265, h: 155,
+    x: 940, y: 535, w: 265, h: 140,
     pins: 'left',
     url:  'https://github.com/Munique-Feitoza/slack-tracker',
     description: {
@@ -138,6 +138,20 @@ const CHIPS = [
       en: 'Rust daemon for Linux/X11 that tracks workspace activity, correlates daily Git commits and automates daily standup summaries via local LLMs (Ollama) or cloud APIs.',
     },
     stack: ['Rust', 'X11', 'LLM', 'Slack API'],
+  },
+  {
+    id: 'net-tools-py',
+    name: 'PY-NETTOOLS',
+    sub:  'network analyzer · Python',
+    part: 'IC-007 · v1.0',
+    x: 505, y: 535, w: 270, h: 140,
+    pins: 'top',
+    url:  'https://github.com/Munique-Feitoza/Ferramentas_de_Rede_em_Python',
+    description: {
+      pt: 'Suite de ferramentas de rede, scanner de portas TCP/UDP e análise de pacotes com sockets puros em Python. Diagnóstico de rotas, verificação de latência, integridade de serviços e automação de monitoramento de infraestrutura.',
+      en: 'Network tooling suite, TCP/UDP port scanner and packet analyzer built with raw Python sockets. Features route diagnostics, latency verification, service integrity checks and infrastructure automation.',
+    },
+    stack: ['Python', 'Networking', 'Sockets', 'Security', 'Automation'],
   },
 ];
 
@@ -180,8 +194,8 @@ const CAPS = [
 const PERIPHERALS = [
   { name: 'U7·BIOS',     x: 160,  y: 50,  w: 110, h: 56, pins: 'all'  },
   { name: 'U8·NIC',      x: 1020, y: 50,  w: 140, h: 60, pins: 'all'  },
-  { name: 'U9·AUDIO',    x: 80,   y: 685, w: 110, h: 48, pins: 'top'  },
-  { name: 'U10·SIO',     x: 1090, y: 685, w: 110, h: 48, pins: 'top'  },
+  { name: 'U9·AUDIO',    x: 75,   y: 700, w: 100, h: 42, pins: 'top'  },
+  { name: 'U10·SIO',     x: 1105, y: 700, w: 100, h: 42, pins: 'top'  },
 ];
 
 /* Background decorative dead-end traces (terminate in solder vias) */
@@ -236,7 +250,7 @@ const TESTPOINTS = [
   ['TP4', 906,  680],
   ['TP5',  50,  500],
   ['TP6', 1230, 500],
-  ['TP7', 600,  580],
+  ['TP7', 430,  600],
   ['TP8', 420,  120],
 ];
 
@@ -571,6 +585,49 @@ const SPRITES = {
     ],
   },
 
+  /* ─ Python snake — PY-NETTOOLS ────────────────────────────── */
+  python: {
+    palette: { B: '#306998', Y: '#ffd43b', W: '#ffffff', K: '#111111' },
+    frames: [
+      [
+        '................',
+        '......BBBB......',
+        '.....BBBWBB.....',
+        '.....BBBKBB.....',
+        '.....BBBBBB.....',
+        '..BBBBBBBBBB....',
+        '..BBBBBBBBBB....',
+        '..BB..BB..YY....',
+        '..BB..YY..YY....',
+        '....YYYYYYYYYY..',
+        '....YYYYYYYYYY..',
+        '.....YYYYYY.....',
+        '.....YYYKYY.....',
+        '.....YYYWYY.....',
+        '......YYYY......',
+        '................',
+      ],
+      [
+        '................',
+        '......BBBB......',
+        '.....BBBWBB.....',
+        '.....BBBKBB.....',
+        '.....BBBBBB.....',
+        '..BBBBBBBBBB....',
+        '..BBBBBBBBBB....',
+        '..BB..YY..YY....',
+        '..BB..BB..YY....',
+        '....YYYYYYYYYY..',
+        '....YYYYYYYYYY..',
+        '.....YYYYYY.....',
+        '.....YYYKYY.....',
+        '.....YYYWYY.....',
+        '......YYYY......',
+        '................',
+      ],
+    ],
+  },
+
   /* ─ Bus — SYSTEM BUS (CPU↔RAM bundle), 14×22 vertical ─────────── */
   bus: {
     palette: { K: '#1a1a1a', Y: '#f7df1e', W: '#a8d0ff', T: '#d4a857', B: '#0a0a0a' },
@@ -634,10 +691,11 @@ const SPRITES = {
 const WALKER_PATHS = [
   { id: 'cpu-to-munux-os', points: [[460,340],[390,340],[390,210],[340,210]], sprite: 'tux',     speed: 55,  scale: 2, carry: 'hands', boxOffsetY: 9,   staggerMs: 0    },
   { id: 'cpu-to-reactive', points: [[460,410],[340,410]],                       sprite: 'ferris', speed: 70,  scale: 2, carry: 'hands', boxOffsetY: 6,   staggerMs: 400  },
-  { id: 'cpu-to-obscura',  points: [[460,470],[390,470],[390,615],[340,615]], sprite: 'hooded', speed: 45,  scale: 2, carry: 'hands', boxOffsetY: 9,   staggerMs: 800  },
+  { id: 'cpu-to-obscura',  points: [[460,470],[390,470],[390,605],[340,605]], sprite: 'hooded', speed: 45,  scale: 2, carry: 'hands', boxOffsetY: 9,   staggerMs: 800  },
   { id: 'cpu-to-books',    points: [[820,340],[890,340],[890,210],[940,210]], sprite: 'book',   speed: 45,  scale: 2, carry: 'none',  boxOffsetY: 0,   staggerMs: 1200 },
   { id: 'cpu-to-server',   points: [[820,410],[940,410]],                       sprite: 'droid',  speed: 55,  scale: 2, carry: 'hands', boxOffsetY: 9,   staggerMs: 1600 },
-  { id: 'cpu-to-slack',    points: [[820,470],[890,470],[890,615],[940,615]], sprite: 'postman',speed: 60,  scale: 2, carry: 'hands', boxOffsetY: 9,   staggerMs: 2000 },
+  { id: 'cpu-to-slack',    points: [[820,470],[890,470],[890,605],[940,605]], sprite: 'postman',speed: 60,  scale: 2, carry: 'hands', boxOffsetY: 9,   staggerMs: 2000 },
+  { id: 'cpu-to-python',   points: [[640,500],[640,535]],                       sprite: 'python', speed: 50,  scale: 2, carry: 'none',  boxOffsetY: 0,   staggerMs: 1000 },
   { id: 'system-bus',      points: [[665,300],[665,110]],                       sprite: 'bus',    speed: 100, scale: 2, carry: 'none',  boxOffsetY: 0,   staggerMs: 200  },
 ];
 
@@ -648,13 +706,15 @@ const TRACES = [
   /* CPU left → REACTIVE-WS */
   [[460, 410], [340, 410]],
   /* CPU left → OBSCURA */
-  [[460, 470], [390, 470], [390, 615], [340, 615]],
+  [[460, 470], [390, 470], [390, 605], [340, 605]],
   /* CPU right → MUNUX-BOOKS */
   [[820, 340], [890, 340], [890, 210], [940, 210]],
   /* CPU right → SERVER-CTRL */
   [[820, 410], [940, 410]],
   /* CPU right → SLACK-TRACKER */
-  [[820, 470], [890, 470], [890, 615], [940, 615]],
+  [[820, 470], [890, 470], [890, 605], [940, 605]],
+  /* CPU bottom → PY-NETTOOLS */
+  [[640, 500], [640, 535]],
 ];
 
 /* ────────────────────────────────────────────────────────────────────────
@@ -674,8 +734,9 @@ const BOOT_LINES = [
   { t: 880,  s: '      munux-books ............ OK' },
   { t: 960,  s: '      server-controller ...... OK' },
   { t: 1040, s: '      slack-tracker .......... OK' },
-  { t: 1140, s: '[OK] Booting MUNUX MAINBOARD v1.0' },
-  { t: 1240, s: '════════════════════════════════════════════════════' },
+  { t: 1120, s: '      py-nettools (Python) ... OK' },
+  { t: 1220, s: '[OK] Booting MUNUX MAINBOARD v1.0' },
+  { t: 1320, s: '════════════════════════════════════════════════════' },
 ];
 
 const BOOT_HOLD_MS = 380;
@@ -1471,21 +1532,6 @@ function buildOverlay() {
   dbg.addEventListener('click', () => showDatasheet(CONTACT));
   container.appendChild(dbg);
 
-  /* Silk-screen contact links at the bottom of the board (DOM, clickable) */
-  const row = document.createElement('div');
-  row.className = 'silk-contact-row';
-  for (const c of CONTACT.contacts) {
-    const a = document.createElement('a');
-    a.className = 'silk-contact';
-    a.href = c.href;
-    a.target = '_blank';
-    a.rel = 'noopener noreferrer';
-    a.setAttribute('aria-label', c.protocol + ' — ' + c.value);
-    a.textContent = '● ' + c.value;
-    row.appendChild(a);
-  }
-  container.appendChild(row);
-
   /* Renderizar lista de projetos para telas mobile / toque */
   renderMobileProjects();
 }
@@ -1637,6 +1683,14 @@ function setupDatasheet() {
   });
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && dialog.open) hideDatasheet();
+  });
+
+  /* Botões de rodapé e barra de navegação para abrir contato */
+  document.querySelectorAll('.open-datasheet-contact').forEach((btn) => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      showDatasheet(CONTACT);
+    });
   });
 }
 
