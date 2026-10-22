@@ -68,12 +68,12 @@ flowchart TD
 
 | Chip | Stack | Resumo |
 |------|-------|--------|
-| [MUNUX](https://github.com/Munique-Feitoza/Munux) | C · Assembly · Rust | OS educacional feito do zero, com kernel próprio (x86) |
+| [MUNUX](https://github.com/Munique-Feitoza/Munux) | C · Assembly · Rust · z/OS | OS educacional feito do zero, com kernel próprio (x86) |
 | [Munux-Reactive-Workspace](https://github.com/Munique-Feitoza/Munux-Reactive-Workspace) | Rust · Ratatui | Terminal gamificado para Linux (XP, níveis, missões) |
 | [Obscura](https://github.com/Munique-Feitoza/Obscura) | Rust | Sentinela de segurança Linux (daemon inotify + análise de ELF) |
 | [server-controller](https://github.com/Munique-Feitoza/server-controller) | Rust · Kotlin · Android | Pocket NOC — agente Rust + app Android de monitoramento |
-| [slack-tracker](https://github.com/Munique-Feitoza/slack-tracker) | Rust · X11 · LLM | Resume seu dia (janela + Git + LLM) na Slack List |
-| [Stellar-Narrators](https://github.com/pancakehoneyb/Stellar-Narrators) | HTML · CSS · JS · NASA APIs | Team de 5 mulheres — NASA Space Apps Challenge |
+| [Spectrum](https://github.com/Munique-Feitoza/Spectrum) | Kotlin · Android · Room DB | Suporte e autorregulação neurodivergente (TEA/TDAH), plano de crise e CAA |
+| [Ferramentas_de_Rede_em_Python](https://github.com/Munique-Feitoza/Ferramentas_de_Rede_em_Python) | Python · Networking · Sockets | Scanner de portas TCP/UDP e analisador de pacotes em sockets puros |
 | [Munux-Books](https://github.com/Munique-Feitoza/Munux-Books) | Kotlin · Compose · Android | App Android pra ler e traduzir livros (EPUB/PDF) |
 
 ---
@@ -88,10 +88,10 @@ Cada chip tem um bonequinho dedicado caminhando pela sua trilha, carregando caix
 | **Ferris** (caranguejo) | CPU ↔ REACTIVE-WS | 70 px/s | crates Rust |
 | **Hooded** (encapuzado) | CPU ↔ OBSCURA | 35 px/s | binários inspecionados |
 | **Book** (livro com pernas) | CPU ↔ MUNUX-BOOKS | 40 px/s | capítulos traduzidos |
-| **Rocket** (foguete) | CPU ↔ STELLAR | 90 px/s | dados estelares |
-| **Droid** (robozinho) | CPU ↔ SERVER-CTRL | 50 px/s | métricas dos servidores |
-| **Postman** (carteiro) | CPU ↔ SLACK-TRACKER | 60 px/s | resumo do dia |
-| **Bus** (ônibus amarelo) | CPU ↔ RAM (8 lanes) | 100 px/s | tokens LLM (Ollama) |
+| **Droid** (robozinho) | CPU ↔ SERVER-CTRL | 55 px/s | métricas dos servidores |
+| **Spectrum** (prisma/coração) | CPU ↔ SPECTRUM | 60 px/s | autorregulação e rotinas CAA |
+| **Python** (cobrinha) | CPU ↔ PY-NETTOOLS | 50 px/s | pacotes de rede e sockets |
+| **Bus** (ônibus) | CPU ↔ RAM (8 lanes) | 100 px/s | barramento de memória (DDR5 ECC / DMA) |
 
 Os walkers entram em cena com **staggers desfasados** (0–2400ms) pra não andarem em uníssono.
 
