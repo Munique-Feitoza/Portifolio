@@ -30,14 +30,14 @@ const CPU = {
   cls: 'cpu',
   name: 'MUNIQUE FEITOZA',
   sub:  'SOFTWARE DEVELOPER',
-  part: 'ads.grad · 2026.05 · rust/c/kotlin/linux',
+  part: 'ads.grad · 2026.05 · rust/c/kotlin/linux/z/os',
   x: 460, y: 300, w: 360, h: 200,
   chamfer: 14,
   description: {
-    pt: 'Desenvolvedora de Software formando em Análise e Desenvolvimento de Sistemas (ADS) em maio/2026. Foco low-level: distros Linux, software de sistema em Rust e C, automação JVM em Kotlin. Construtora por padrão — quando algo não existe ou quebra, eu escrevo do zero.',
-    en: 'Software Developer graduating in Systems Analysis & Development (ADS) in May 2026. Low-level focus: Linux distros, systems software in Rust and C, JVM automation in Kotlin. Builder by default — when something doesn’t exist or breaks, I write it from scratch.',
+    pt: 'Desenvolvedora de Software formando em ADS em maio/2026. Foco em engenharia de sistemas e low-level: distros Linux, z/OS & mainframes, software de sistema em Rust e C, e automação nativa Kotlin/Android. Construtora por padrão — quando algo não existe ou quebra, eu projeto e escrevo do zero.',
+    en: 'Software Developer graduating in Systems Analysis & Development (ADS) in May 2026. Focus on systems engineering and low-level: Linux distros, z/OS & mainframes, systems software in Rust and C, and native Kotlin/Android automation. Builder by default — when something doesn’t exist or breaks, I build it from scratch.',
   },
-  stack: ['Rust', 'C', 'Kotlin', 'Linux', 'JS/TS', 'Bash', 'Git'],
+  stack: ['Rust', 'C', 'Kotlin', 'Linux', 'z/OS', 'Assembly', 'Java', 'Python', 'JS/TS', 'Bash', 'Git'],
 };
 
 const RAM = {
@@ -58,28 +58,28 @@ const CHIPS = [
   {
     id: 'munux-os',
     name: 'MUNUX',
-    sub:  'OS x86 · C/asm/Rust',
-    part: 'IC-001 · dev',
-    x: 80, y: 130, w: 260, h: 160,
+    sub:  'OS & Kernel · C/Rust/z/OS',
+    part: 'IC-001 · systems',
+    x: 75, y: 130, w: 265, h: 160,
     pins: 'right',
     url:  'https://github.com/Munique-Feitoza/Munux',
     description: {
-      pt: 'Sistema operacional educacional feito do zero, com kernel próprio monolítico (x86). Código poliglota: Assembly no bootloader e nos stubs de interrupção, C (C99 freestanding) no núcleo e Rust (no_std) nos componentes sensíveis à memória. Em vez de esconder a complexidade, expõe o funcionamento interno (memória, interrupções, escalonamento) e libera comandos "perigosos" conforme o usuário evolui — aprendizado em camadas.',
-      en: 'Educational operating system built from scratch with its own monolithic x86 kernel. Polyglot codebase: Assembly for the bootloader and interrupt stubs, C (C99, freestanding) for the core, and Rust (no_std) for memory-sensitive components. Instead of hiding complexity, it exposes the internals (memory, interrupts, scheduling) and gamifies mastery, unlocking "dangerous" commands as the user levels up.',
+      pt: 'Sistema operacional e ambiente low-level feito do zero com kernel monolítico próprio x86 e expansões modernas inspiradas em arquiteturas enterprise e z/OS. Código poliglota: Assembly no bootloader e vetores de interrupção, C (C99 freestanding) no núcleo e Rust (no_std) em camadas críticas de memória e segurança.',
+      en: 'Educational OS and low-level system built from scratch with a custom x86 monolithic kernel and modern extensions inspired by enterprise architectures and z/OS concepts. Polyglot codebase: Assembly for bootloader and interrupts, C (C99 freestanding) in the core, and Rust (no_std) for memory-critical modules.',
     },
-    stack: ['C', 'Assembly', 'Rust', 'x86 Kernel'],
+    stack: ['C', 'Assembly', 'Rust', 'z/OS concepts', 'x86 Kernel'],
   },
   {
     id: 'munux-books',
     name: 'MUNUX-BOOKS',
     sub:  'read & translate · Kotlin',
     part: 'IC-002 · v0.1',
-    x: 940, y: 130, w: 260, h: 160,
+    x: 940, y: 130, w: 265, h: 160,
     pins: 'left',
     url:  'https://github.com/Munique-Feitoza/Munux-Books',
     description: {
-      pt: 'App Android (Kotlin + Jetpack Compose) para ler e traduzir livros. Abre arquivos EPUB e PDF e traduz os capítulos automaticamente para o seu idioma, usando o provedor de tradução e a chave de API que você escolher. Leitura confortável: tipografia ajustável, três temas, paginação com encaixe e memória de posição.',
-      en: 'Android app (Kotlin + Jetpack Compose) to read and translate books. It opens EPUB and PDF files and automatically translates chapters into your language, using the translation provider and API key you choose. Comfortable reading: adjustable typography, three themes, snap pagination and reading-position memory.',
+      pt: 'App Android (Kotlin + Jetpack Compose) para leitura e tradução inteligente de livros (EPUB e PDF). Traduz capítulos automaticamente com provedores de IA configuráveis e interface responsiva focada em ergonomia.',
+      en: 'Android app (Kotlin + Jetpack Compose) to read and translate EPUB and PDF books with automated AI-assisted chapter translation and ergonomic reader typography.',
     },
     stack: ['Kotlin', 'Jetpack Compose', 'Android', 'EPUB/PDF'],
   },
@@ -88,98 +88,56 @@ const CHIPS = [
     name: 'REACTIVE-WS',
     sub:  'gamified terminal · Rust',
     part: 'IC-003 · v0.2',
-    x: 70, y: 330, w: 240, h: 140,
+    x: 75, y: 340, w: 265, h: 145,
     pins: 'right',
     url:  'https://github.com/Munique-Feitoza/Munux-Reactive-Workspace',
     description: {
-      pt: 'Terminal gamificado para Linux feito em Rust com Ratatui. Um terminal totalmente funcional combinado com um sistema completo de gamificação (XP, níveis, conquistas e missões) e painéis reativos que se adaptam ao que você está fazendo. Pensado tanto para aprender comandos quanto para o uso diário.',
-      en: 'Gamified terminal for Linux built in Rust with Ratatui. A fully functional terminal combined with a complete gamification system (XP, levels, achievements and quests) and reactive panels that adapt to what you are doing. Designed both for learning commands and for daily use.',
+      pt: 'Terminal gamificado para Linux feito em Rust com Ratatui. Combina shell interativo completo com progressão por XP, níveis e painéis de telemetria adaptativa.',
+      en: 'Gamified terminal for Linux built in Rust with Ratatui. Features an interactive shell with XP progression, quests, and adaptive telemetry panels.',
     },
     stack: ['Rust', 'Ratatui', 'TUI', 'Linux'],
   },
   {
-    id: 'stellar-narrators',
-    name: 'STELLAR',
-    sub:  'NASA team · HTML',
-    part: 'IC-004 · 2024',
-    x: 970, y: 330, w: 240, h: 140,
+    id: 'server-controller',
+    name: 'SERVER-CTRL',
+    sub:  'pocket NOC · Rust+Kotlin',
+    part: 'IC-004 · v0.1',
+    x: 940, y: 340, w: 265, h: 145,
     pins: 'left',
-    url:  'https://github.com/pancakehoneyb/Stellar-Narrators',
+    url:  'https://github.com/Munique-Feitoza/server-controller',
     description: {
-      pt: 'Um time de cinco jovens mulheres apaixonadas por ciência e tecnologia. Misturamos código, design e criatividade para construir uma solução inovadora, intuitiva e mágica para o NASA Space Apps Challenge.',
-      en: 'A team of five young women passionate about science and technology. We blend coding, design and creativity to build an innovative, intuitive and magical solution for NASA’s Space Apps Challenge.',
+      pt: 'Pocket NOC: monitoramento e segurança remota com agente leve em Rust (<15MB RAM) e app Android nativo em Kotlin/Jetpack Compose para controle total de servidores em tempo real.',
+      en: 'Pocket NOC: lightweight infrastructure monitoring and security solution featuring a low-footprint Rust server agent (<15MB RAM) and native Android Jetpack Compose remote controller.',
     },
-    stack: ['HTML', 'CSS', 'JavaScript', 'NASA APIs'],
+    stack: ['Rust', 'Kotlin', 'Jetpack Compose', 'Android', 'Linux SysAdmin'],
   },
   {
     id: 'obscura',
     name: 'OBSCURA',
     sub:  'security sentinel · Rust',
     part: 'IC-005 · v0.1',
-    x: 70, y: 520, w: 240, h: 150,
+    x: 75, y: 540, w: 265, h: 155,
     pins: 'right',
     url:  'https://github.com/Munique-Feitoza/Obscura',
     description: {
-      pt: 'Sentinela de segurança para Linux em Rust, com dois modos: daemon em tempo real via inotify e analisador estático de binários ELF x86_64. Calcula entropia de Shannon, inspeciona imports dinâmicos, faz disassembly heurístico, extrai IoCs (IPs, URLs, carteiras cripto, comandos suspeitos) e verifica a origem do download — emitindo alertas no terminal, em log rotacionado e por notificação desktop, com quarentena opcional.',
-      en: 'Linux security sentinel in Rust with two modes: a real-time inotify daemon and a static analyzer for x86_64 ELF binaries. It computes Shannon entropy, inspects dynamic imports, runs heuristic disassembly, extracts IoCs (IPs, URLs, crypto wallets, suspicious commands) and checks download provenance — raising alerts in the terminal, in a rotated log and via desktop notification, with optional quarantine.',
+      pt: 'Sentinela de segurança para Linux em Rust com daemon inotify em tempo real e analisador estático de binários ELF x86_64: detecção de entropia de Shannon, extração de IoCs e contenção de arquivos maliciosos.',
+      en: 'Linux security sentinel in Rust with real-time inotify monitoring and static x86_64 ELF binary analysis: Shannon entropy check, IoC extraction and threat isolation.',
     },
     stack: ['Rust', 'ELF Analysis', 'inotify', 'Security'],
-  },
-  {
-    id: 'server-controller',
-    name: 'SERVER-CTRL',
-    sub:  'pocket NOC · Rust+Kotlin',
-    part: 'IC-006 · v0.1',
-    x: 970, y: 520, w: 240, h: 150,
-    pins: 'left',
-    url:  'https://github.com/Munique-Feitoza/server-controller',
-    description: {
-      pt: 'Pocket NOC — um centro de operações de rede no bolso. Solução completa de monitoramento, segurança e gestão de infraestrutura: um agente em Rust rodando nos servidores (< 15 MB de RAM, < 0,5% de CPU) somado a um app Android nativo em Kotlin/Jetpack Compose para controle remoto em tempo real.',
-      en: 'Pocket NOC — a network operations center in your pocket. A complete monitoring, security and infrastructure-management solution: a Rust agent running on the servers (< 15 MB RAM, < 0.5% CPU) paired with a native Android app in Kotlin/Jetpack Compose for real-time remote control.',
-    },
-    stack: ['Rust', 'Kotlin', 'Jetpack Compose', 'Android', 'Linux SysAdmin'],
   },
   {
     id: 'slack-tracker',
     name: 'SLACK-TRACKER',
     sub:  'work tracker · Rust+LLM',
-    part: 'IC-007 · v0.1',
-    x: 510, y: 600, w: 260, h: 120,
-    pins: 'top',
+    part: 'IC-006 · v0.1',
+    x: 940, y: 540, w: 265, h: 155,
+    pins: 'left',
     url:  'https://github.com/Munique-Feitoza/slack-tracker',
     description: {
-      pt: 'Daemon em Rust que acompanha minha rotina de trabalho no Linux/X11: observa qual janela está ativa, descobre em qual projeto estou mexendo, junta a atividade do Git do dia e gera um resumo via LLM (Ollama local, Claude ou OpenAI) para atualizar automaticamente minha Slack List todo dia às 17h — sem eu precisar parar pra escrever "o que fiz hoje".',
-      en: 'Rust daemon that tracks my work routine on Linux/X11: it watches the active window, figures out which project I am on, combines the day\'s Git activity and generates an LLM summary (local Ollama, Claude or OpenAI) to automatically update my Slack List every day at 5pm — without me having to stop and write "what I did today".',
+      pt: 'Daemon em Rust para Linux/X11: rastreia rotinas de trabalho, correlaciona commits no Git e gera resumos via LLMs locais (Ollama) ou em nuvem para automação de status report diário.',
+      en: 'Rust daemon for Linux/X11 that tracks workspace activity, correlates daily Git commits and automates daily standup summaries via local LLMs (Ollama) or cloud APIs.',
     },
     stack: ['Rust', 'X11', 'LLM', 'Slack API'],
-  },
-  {
-    id: 'asm-calc',
-    name: 'ASM-CALC',
-    sub:  'assembly x86_64',
-    part: 'IC-008 · low-level',
-    x: 320, y: 600, w: 170, h: 120,
-    pins: 'top',
-    url:  'https://github.com/Munique-Feitoza/Calculadora-em-Assembly-x86_64',
-    description: {
-      pt: 'Calculadora aritmética desenvolvida diretamente em puro Assembly x86_64 com Linux syscalls nativas, manipulação direta de registradores e parsing de inteiros na memória sem runtime ou biblioteca padrão C.',
-      en: 'Arithmetic calculator built in pure x86_64 Assembly using raw Linux syscalls, direct register management and custom integer parsing in memory without any C standard library runtime.',
-    },
-    stack: ['Assembly x86_64', 'Linux Syscalls', 'Registers', 'Low-level'],
-  },
-  {
-    id: 'java-bank',
-    name: 'JAVA-CORE',
-    sub:  'banking system · Java',
-    part: 'IC-009 · OOP',
-    x: 790, y: 600, w: 160, h: 120,
-    pins: 'top',
-    url:  'https://github.com/Munique-Feitoza/sistema_bancario_em_java',
-    description: {
-      pt: 'Sistema bancário orientado a objetos em Java puro com modelagem completa de contas, transferências concorrentes, validação transacional e tratamento robusto de exceções.',
-      en: 'Object-oriented core banking system in pure Java featuring account domain modeling, transactional safety, concurrent transfers and robust exception handling.',
-    },
-    stack: ['Java', 'OOP', 'Software Architecture', 'Data Validation'],
   },
 ];
 
@@ -202,14 +160,14 @@ const CONTACT = {
 };
 
 const SKILLS = [
-  { label: 'RUST',   x: 90,   y: 295, color: '#dea584' },
-  { label: 'C',      x: 180,  y: 295, color: '#a8b9cc' },
-  { label: 'LINUX',  x: 90,   y: 480, color: '#fcc624' },
-  { label: 'KOTLIN', x: 180,  y: 480, color: '#7f52ff' },
-  { label: 'HTML',   x: 970,  y: 295, color: '#e34c26' },
-  { label: 'JS/TS',  x: 1060, y: 295, color: '#f7df1e' },
-  { label: 'GIT',    x: 970,  y: 480, color: '#f1502f' },
-  { label: 'BASH',   x: 1060, y: 480, color: '#4eaa25' },
+  { label: 'RUST',   x: 90,   y: 300, color: '#dea584' },
+  { label: 'C',      x: 180,  y: 300, color: '#a8b9cc' },
+  { label: 'LINUX',  x: 90,   y: 495, color: '#fcc624' },
+  { label: 'z/OS',   x: 180,  y: 495, color: '#4ad5ff' },
+  { label: 'KOTLIN', x: 970,  y: 300, color: '#7f52ff' },
+  { label: 'ASM',    x: 1060, y: 300, color: '#ffb000' },
+  { label: 'JAVA',   x: 970,  y: 495, color: '#f1502f' },
+  { label: 'JS/TS',  x: 1060, y: 495, color: '#f7df1e' },
 ];
 
 const CAPS = [
@@ -674,32 +632,29 @@ const SPRITES = {
  * `staggerMs`: initial pause so walkers desync on first frame.            */
 
 const WALKER_PATHS = [
-  { id: 'cpu-to-munux-os', points: [[460,340],[400,340],[400,210],[340,210]], sprite: 'tux',     speed: 55,  scale: 2, carry: 'hands', boxOffsetY: 9,   staggerMs: 0    },
-  { id: 'cpu-to-reactive', points: [[460,400],[310,400]],                       sprite: 'ferris', speed: 70,  scale: 2, carry: 'hands', boxOffsetY: 6,   staggerMs: 400  },
-  { id: 'cpu-to-obscura',  points: [[500,500],[500,595],[310,595]],            sprite: 'hooded', speed: 35,  scale: 2, carry: 'hands', boxOffsetY: 9,   staggerMs: 800  },
-  { id: 'cpu-to-books',    points: [[820,340],[880,340],[880,210],[940,210]], sprite: 'book',   speed: 40,  scale: 2, carry: 'none',  boxOffsetY: 0,   staggerMs: 1200 },
-  { id: 'cpu-to-stellar',  points: [[820,400],[970,400]],                       sprite: 'rocket', speed: 90,  scale: 2, carry: 'hands', boxOffsetY: 6,   staggerMs: 1600 },
-  { id: 'cpu-to-server',   points: [[780,500],[780,595],[970,595]],            sprite: 'droid',  speed: 50,  scale: 2, carry: 'hands', boxOffsetY: 9,   staggerMs: 2000 },
-  { id: 'cpu-to-slack',    points: [[640,500],[640,600]],                       sprite: 'postman',speed: 60,  scale: 2, carry: 'hands', boxOffsetY: 9,   staggerMs: 2400 },
+  { id: 'cpu-to-munux-os', points: [[460,340],[390,340],[390,210],[340,210]], sprite: 'tux',     speed: 55,  scale: 2, carry: 'hands', boxOffsetY: 9,   staggerMs: 0    },
+  { id: 'cpu-to-reactive', points: [[460,410],[340,410]],                       sprite: 'ferris', speed: 70,  scale: 2, carry: 'hands', boxOffsetY: 6,   staggerMs: 400  },
+  { id: 'cpu-to-obscura',  points: [[460,470],[390,470],[390,615],[340,615]], sprite: 'hooded', speed: 45,  scale: 2, carry: 'hands', boxOffsetY: 9,   staggerMs: 800  },
+  { id: 'cpu-to-books',    points: [[820,340],[890,340],[890,210],[940,210]], sprite: 'book',   speed: 45,  scale: 2, carry: 'none',  boxOffsetY: 0,   staggerMs: 1200 },
+  { id: 'cpu-to-server',   points: [[820,410],[940,410]],                       sprite: 'droid',  speed: 55,  scale: 2, carry: 'hands', boxOffsetY: 9,   staggerMs: 1600 },
+  { id: 'cpu-to-slack',    points: [[820,470],[890,470],[890,615],[940,615]], sprite: 'postman',speed: 60,  scale: 2, carry: 'hands', boxOffsetY: 9,   staggerMs: 2000 },
   { id: 'system-bus',      points: [[665,300],[665,110]],                       sprite: 'bus',    speed: 100, scale: 2, carry: 'none',  boxOffsetY: 0,   staggerMs: 200  },
 ];
 
-/* Traces from CPU edges to each chip (right-angle paths) */
+/* Traces from CPU edges to each chip (clean, elegant right-angle paths) */
 const TRACES = [
   /* CPU left → MUNUX-OS */
-  [[460, 340], [400, 340], [400, 210], [340, 210]],
+  [[460, 340], [390, 340], [390, 210], [340, 210]],
   /* CPU left → REACTIVE-WS */
-  [[460, 400], [310, 400]],
-  /* CPU bottom-left → OBSCURA */
-  [[500, 500], [500, 595], [310, 595]],
+  [[460, 410], [340, 410]],
+  /* CPU left → OBSCURA */
+  [[460, 470], [390, 470], [390, 615], [340, 615]],
   /* CPU right → MUNUX-BOOKS */
-  [[820, 340], [880, 340], [880, 210], [940, 210]],
-  /* CPU right → STELLAR */
-  [[820, 400], [970, 400]],
-  /* CPU bottom-right → SERVER-CTRL */
-  [[780, 500], [780, 595], [970, 595]],
-  /* CPU bottom-center → SLACK-TRACKER */
-  [[640, 500], [640, 600]],
+  [[820, 340], [890, 340], [890, 210], [940, 210]],
+  /* CPU right → SERVER-CTRL */
+  [[820, 410], [940, 410]],
+  /* CPU right → SLACK-TRACKER */
+  [[820, 470], [890, 470], [890, 615], [940, 615]],
 ];
 
 /* ────────────────────────────────────────────────────────────────────────
@@ -713,15 +668,14 @@ const BOOT_LINES = [
   { t: 360,  s: '[OK] MEM test ................ OLLAMA_LOCAL  8GB OK' },
   { t: 460,  s: '[OK] BUS ..................... system-bus available' },
   { t: 560,  s: '[--] Mounting /chips ...' },
-  { t: 640,  s: '      munux-os ............... OK' },
+  { t: 640,  s: '      munux-os (C/Rust/zOS) .. OK' },
   { t: 720,  s: '      reactive-workspace ..... OK' },
   { t: 800,  s: '      obscura ................ OK' },
-  { t: 880,  s: '      slack-tracker .......... OK' },
+  { t: 880,  s: '      munux-books ............ OK' },
   { t: 960,  s: '      server-controller ...... OK' },
-  { t: 1040, s: '      stellar-narrators ...... OK' },
-  { t: 1120, s: '      munux-books ............ OK' },
-  { t: 1240, s: '[OK] Booting MUNUX MAINBOARD v1.0' },
-  { t: 1340, s: '════════════════════════════════════════════════════' },
+  { t: 1040, s: '      slack-tracker .......... OK' },
+  { t: 1140, s: '[OK] Booting MUNUX MAINBOARD v1.0' },
+  { t: 1240, s: '════════════════════════════════════════════════════' },
 ];
 
 const BOOT_HOLD_MS = 380;
