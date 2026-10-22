@@ -111,6 +111,8 @@ html, body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  padding-bottom: 52px;
+  box-sizing: border-box;
   background:
     radial-gradient(ellipse at 50% 45%, #0e4d35 0%, #062018 70%, #020c07 100%);
   opacity: 0;
@@ -123,7 +125,8 @@ html, body {
 
 .board-frame {
   position: relative;
-  width: min(96vw, calc(94vh * 1.6));
+  width: min(94vw, calc((100vh - 86px) * 1.6));
+  max-height: calc(100vh - 86px);
   aspect-ratio: 1280 / 800;
   border: 2px solid var(--copper);
   border-radius: 6px;

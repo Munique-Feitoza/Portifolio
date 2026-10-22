@@ -30,12 +30,12 @@ const CPU = {
   cls: 'cpu',
   name: 'MUNIQUE FEITOZA',
   sub:  'SOFTWARE DEVELOPER',
-  part: 'ads.grad · 2026.05 · rust/c/kotlin/linux/z/os',
+  part: 'systems & low-level · rust/c/kotlin/linux/z/os',
   x: 460, y: 300, w: 360, h: 200,
   chamfer: 14,
   description: {
-    pt: 'Desenvolvedora de Software formando em ADS em maio/2026. Foco em engenharia de sistemas e low-level: distros Linux, z/OS & mainframes, software de sistema em Rust e C, e automação nativa Kotlin/Android. Construtora por padrão — quando algo não existe ou quebra, eu projeto e escrevo do zero.',
-    en: 'Software Developer graduating in Systems Analysis & Development (ADS) in May 2026. Focus on systems engineering and low-level: Linux distros, z/OS & mainframes, systems software in Rust and C, and native Kotlin/Android automation. Builder by default — when something doesn’t exist or breaks, I build it from scratch.',
+    pt: 'Desenvolvedora de Software com foco em engenharia de sistemas e low-level: distros Linux, z/OS & mainframes, software de sistema em Rust e C, e automação nativa Kotlin/Android. Construtora por padrão — quando algo não existe ou quebra, eu projeto e escrevo do zero.',
+    en: 'Software Developer focused on systems engineering and low-level: Linux distros, z/OS & mainframes, systems software in Rust and C, and native Kotlin/Android automation. Builder by default — when something doesn’t exist or breaks, I build it from scratch.',
   },
   stack: ['Rust', 'C', 'Kotlin', 'Linux', 'z/OS', 'Assembly', 'Java', 'Python', 'JS/TS', 'Bash', 'Git'],
 };
