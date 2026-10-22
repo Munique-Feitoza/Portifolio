@@ -72,7 +72,7 @@ flowchart TD
 | [Munux-Reactive-Workspace](https://github.com/Munique-Feitoza/Munux-Reactive-Workspace) | Rust · Ratatui | Terminal gamificado para Linux (XP, níveis, missões) |
 | [Obscura](https://github.com/Munique-Feitoza/Obscura) | Rust | Sentinela de segurança Linux (daemon inotify + análise de ELF) |
 | [server-controller](https://github.com/Munique-Feitoza/server-controller) | Rust · Kotlin · Android | Pocket NOC — agente Rust + app Android de monitoramento |
-| [Spectrum](https://github.com/Munique-Feitoza/Spectrum) | Kotlin · Android · Room DB | Suporte e autorregulação neurodivergente (TEA/TDAH), plano de crise e CAA |
+| [Spectrum](https://github.com/Munique-Feitoza/Spectrum) | Java · Android · Room DB | Suporte e autorregulação neurodivergente (TEA/TDAH), plano de crise e CAA |
 | [Ferramentas_de_Rede_em_Python](https://github.com/Munique-Feitoza/Ferramentas_de_Rede_em_Python) | Python · Networking · Sockets | Scanner de portas TCP/UDP e analisador de pacotes em sockets puros |
 | [Munux-Books](https://github.com/Munique-Feitoza/Munux-Books) | Kotlin · Compose · Android | App Android pra ler e traduzir livros (EPUB/PDF) |
 
