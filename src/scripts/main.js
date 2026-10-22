@@ -29,13 +29,13 @@ const CPU = {
   id: 'cpu',
   cls: 'cpu',
   name: 'MUNIQUE FEITOZA',
-  sub:  'JR. DEVELOPER',
+  sub:  'SOFTWARE DEVELOPER',
   part: 'ads.grad · 2026.05 · rust/c/kotlin/linux',
   x: 460, y: 300, w: 360, h: 200,
   chamfer: 14,
   description: {
-    pt: 'Desenvolvedora Júnior formando em Análise e Desenvolvimento de Sistemas (ADS) este mês (maio/2026). Foco low-level: distros Linux, software de sistema em Rust e C, automação JVM em Kotlin. Construtora por padrão — quando algo não existe ou quebra, eu escrevo do zero.',
-    en: 'Junior Developer graduating in Systems Analysis & Development (ADS) this month (May 2026). Low-level focus: Linux distros, systems software in Rust and C, JVM automation in Kotlin. Builder by default — when something doesn’t exist or breaks, I write it from scratch.',
+    pt: 'Desenvolvedora de Software formando em Análise e Desenvolvimento de Sistemas (ADS) em maio/2026. Foco low-level: distros Linux, software de sistema em Rust e C, automação JVM em Kotlin. Construtora por padrão — quando algo não existe ou quebra, eu escrevo do zero.',
+    en: 'Software Developer graduating in Systems Analysis & Development (ADS) in May 2026. Low-level focus: Linux distros, systems software in Rust and C, JVM automation in Kotlin. Builder by default — when something doesn’t exist or breaks, I write it from scratch.',
   },
   stack: ['Rust', 'C', 'Kotlin', 'Linux', 'JS/TS', 'Bash', 'Git'],
 };
@@ -165,6 +165,8 @@ const CONTACT = {
     en: 'Want to reach me? Each header pin has its own protocol — pick a channel below.',
   },
   contacts: [
+    { label: 'CV-BR', protocol: 'resume-pt', value: 'Curriculo Munique (PDF)',                     href: './assets/curriculo-munique-feitoza.pdf' },
+    { label: 'CV-EN', protocol: 'resume-en', value: 'Resume Munique (PDF)',                        href: './assets/curriculo-munique-feitoza-en.pdf' },
     { label: 'GH',  protocol: 'github',   value: 'github.com/Munique-Feitoza',                 href: 'https://github.com/Munique-Feitoza' },
     { label: 'IN',  protocol: 'linkedin', value: 'linkedin.com/in/munique-feitoza-77034b231',  href: 'https://www.linkedin.com/in/munique-feitoza-77034b231/' },
     { label: 'SMTP', protocol: 'email',   value: 'muniquefeitoz4@gmail.com',                    href: 'mailto:muniquefeitoz4@gmail.com' },
@@ -679,7 +681,7 @@ const TRACES = [
 const BOOT_LINES = [
   { t: 0,    s: 'MUNUX BIOS v1.0  (c) 2026 Munique Feitoza' },
   { t: 120,  s: '════════════════════════════════════════════════════' },
-  { t: 240,  s: '[OK] CPU detected ............ MUNIQ_FEITOZA @ jr.dev' },
+  { t: 240,  s: '[OK] CPU detected ............ MUNIQ_FEITOZA @ dev' },
   { t: 360,  s: '[OK] MEM test ................ OLLAMA_LOCAL  8GB OK' },
   { t: 460,  s: '[OK] BUS ..................... system-bus available' },
   { t: 560,  s: '[--] Mounting /chips ...' },
@@ -783,7 +785,7 @@ function drawSilkBorder(ctx) {
   ctx.textBaseline = 'top';
   ctx.fillText('MUNUX', 64, 16);
   ctx.fillText('REV 1.0', 64, 28);
-  ctx.fillText('JR. DEV · 2026.05', W - 196, 16);
+  ctx.fillText('DEV · 2026.05', W - 196, 16);
   ctx.fillStyle = C.silkDim;
   ctx.font = '8px JetBrains Mono, monospace';
   ctx.fillText('FCC ID: MUNUX-2026 · PCB-ASSEMBLED-BR', W - 196, 28);

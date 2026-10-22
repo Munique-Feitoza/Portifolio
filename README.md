@@ -137,7 +137,7 @@ Tudo cabe em ~75KB total (HTML 2.7KB · CSS 20KB · JS 54KB).
 
 ## ▮ Sobre mim
 
-Junior Developer formando em **Análise e Desenvolvimento de Sistemas (ADS)** em maio/2026. Foco em low-level: distros Linux, sistemas em Rust e C, automação Kotlin/JVM. Construo do zero quando o que existe não serve.
+**Software Developer** graduando em **Análise e Desenvolvimento de Sistemas (ADS)** em maio/2026. Foco em low-level: distros Linux, sistemas em Rust e C, automação Kotlin/JVM. Construo do zero quando o que existe não serve.
 
 ---
 
