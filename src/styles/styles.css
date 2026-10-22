@@ -134,8 +134,6 @@ html, body {
     0 0 60px rgba(212,168,87,0.18),
     0 0 4px rgba(212,168,87,0.4) inset,
     0 0 80px rgba(0,0,0,0.7) inset;
-  transform-style: preserve-3d;
-  transition: transform 300ms ease-out;
   will-change: transform;
 }
 
@@ -185,7 +183,8 @@ html, body {
   align-items: center;
   justify-content: center;
   gap: 2px;
-  transition: filter 200ms ease, transform 200ms ease;
+  border-radius: 4px;
+  transition: background 150ms ease, transform 150ms ease;
 }
 
 .chip:focus { outline: none; }
@@ -224,7 +223,9 @@ html, body {
   text-shadow: 0 0 10px var(--amber), 0 0 2px var(--amber-bright);
 }
 
-.chip:hover { filter: brightness(1.08); }
+.chip:hover {
+  background: rgba(255, 176, 0, 0.06);
+}
 .chip:active { transform: scale(0.99); }
 
 /* CPU central — maior, etiqueta dourada */
@@ -338,9 +339,8 @@ html, body {
     to bottom,
     rgba(0,0,0,0)    0px,
     rgba(0,0,0,0)    2px,
-    rgba(0,0,0,0.10) 3px
+    rgba(0,0,0,0.12) 3px
   );
-  mix-blend-mode: multiply;
   border-radius: 4px;
 }
 

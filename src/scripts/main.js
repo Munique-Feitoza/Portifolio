@@ -78,8 +78,8 @@ const CHIPS = [
     pins: 'left',
     url:  'https://github.com/Munique-Feitoza/Munux-Books',
     description: {
-      pt: 'App Android (Kotlin + Jetpack Compose) para leitura e tradução inteligente de livros (EPUB e PDF). Traduz capítulos automaticamente com provedores de IA configuráveis e interface responsiva focada em ergonomia.',
-      en: 'Android app (Kotlin + Jetpack Compose) to read and translate EPUB and PDF books with automated AI-assisted chapter translation and ergonomic reader typography.',
+      pt: 'App Android (Kotlin + Jetpack Compose) para leitura e tradução inteligente de livros (EPUB e PDF). Traduz capítulos automaticamente com motores de tradução configuráveis e interface responsiva focada em ergonomia.',
+      en: 'Android app (Kotlin + Jetpack Compose) to read and translate EPUB and PDF books with automated chapter translation and ergonomic reader typography.',
     },
     stack: ['Kotlin', 'Jetpack Compose', 'Android', 'EPUB/PDF'],
   },
@@ -1724,8 +1724,8 @@ function setupMouseTilt() {
     const cy = window.innerHeight / 2;
     const dx = (e.clientX - cx) / cx;
     const dy = (e.clientY - cy) / cy;
-    targetX = -dy * 2.5;
-    targetY =  dx * 2.5;
+    targetX = Math.max(-1.8, Math.min(1.8, -dy * 1.8));
+    targetY = Math.max(-1.8, Math.min(1.8,  dx * 1.8));
     if (!raf) raf = requestAnimationFrame(apply);
   }, { passive: true });
 
