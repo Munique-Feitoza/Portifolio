@@ -29,15 +29,15 @@ const CPU = {
   id: 'cpu',
   cls: 'cpu',
   name: 'MUNIQUE FEITOZA',
-  sub:  'SOFTWARE DEVELOPER',
-  part: 'systems & low-level · rust/c/kotlin/linux/z/os',
+  sub:  'SOFTWARE & SYSTEMS ENGINEER',
+  part: 'Platform & SRE · Low-Level Architecture · Rust / C / Python / Linux',
   x: 460, y: 300, w: 360, h: 200,
   chamfer: 14,
   description: {
-    pt: 'Desenvolvedora de Software com foco em engenharia de sistemas e low-level: distros Linux, z/OS & mainframes, software de sistema em Rust e C, e automação nativa Kotlin/Android. Construtora por padrão — quando algo não existe ou quebra, eu projeto e escrevo do zero.',
-    en: 'Software Developer focused on systems engineering and low-level: Linux distros, z/OS & mainframes, systems software in Rust and C, and native Kotlin/Android automation. Builder by default — when something doesn’t exist or breaks, I build it from scratch.',
+    pt: 'Engenheira de Software & Sistemas com foco em Platform Engineering, SRE e programação de baixo nível: distros Linux, telemetria bare-metal de alta performance, agentes de sistema em Rust e C, backends de missão crítica e resiliência operacional. Construtora por padrão — quando algo não existe ou quebra, eu projeto e escrevo do zero.',
+    en: 'Software & Systems Engineer focused on Platform Engineering, SRE, and low-level architecture: Linux internals, high-performance bare-metal telemetry, systems agents in Rust and C, mission-critical backends, and operational resilience. Builder by default — when something doesn’t exist or breaks, I build it from scratch.',
   },
-  stack: ['Rust', 'C', 'Kotlin', 'Linux', 'z/OS', 'Assembly', 'Java', 'Python', 'JS/TS', 'Bash', 'Git'],
+  stack: ['Rust', 'C', 'Linux Internals', 'Assembly', 'Python', 'Kotlin', 'z/OS', 'SRE / Platform', 'Docker', 'Bash', 'Git'],
 };
 
 const RAM = {
