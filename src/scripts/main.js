@@ -1520,19 +1520,6 @@ function buildOverlay() {
   place(RAM);
   for (const ch of CHIPS) place(ch);
 
-  /* DEBUG port — clickable header above J1·DEBUG silk (top-center) */
-  const dbg = document.createElement('button');
-  dbg.type = 'button';
-  dbg.className = 'debug-port';
-  dbg.style.left   = ((W/2 - 54) / W * 100) + '%';
-  dbg.style.top    = (34 / H * 100) + '%';
-  dbg.style.width  = (108 / W * 100) + '%';
-  dbg.style.height = (28 / H * 100) + '%';
-  dbg.setAttribute('aria-label', 'J1 DEBUG port — abrir canais de contato');
-  dbg.textContent = '';  /* invisible hitbox over silk */
-  dbg.addEventListener('click', () => showDatasheet(CONTACT));
-  container.appendChild(dbg);
-
   /* Renderizar lista de projetos para telas mobile / toque */
   renderMobileProjects();
 }
@@ -1550,7 +1537,7 @@ function renderMobileProjects() {
   `;
   mobileList.appendChild(header);
 
-  const allItems = [CPU, RAM, ...CHIPS, CONTACT];
+  const allItems = [CPU, RAM, ...CHIPS];
   const grid = document.createElement('div');
   grid.className = 'mobile-chips-grid';
 
