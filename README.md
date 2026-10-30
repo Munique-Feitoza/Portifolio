@@ -68,7 +68,7 @@ flowchart TD
 
 | Chip | Stack | Resumo |
 |------|-------|--------|
-| [MUNUX](https://github.com/Munique-Feitoza/Munux) | C · Assembly · Rust · z/OS | OS educacional feito do zero, com kernel próprio (x86) |
+| [MUNUX](https://github.com/Munique-Feitoza/Munux) | C · Assembly · Rust · COBOL · z/OS | OS educacional feito do zero, com kernel próprio (x86) e laboratório Mainframe z/OS & COBOL |
 | [Munux-Reactive-Workspace](https://github.com/Munique-Feitoza/Munux-Reactive-Workspace) | Rust · Ratatui | Terminal gamificado para Linux (XP, níveis, missões) |
 | [Obscura](https://github.com/Munique-Feitoza/Obscura) | Rust | Sentinela de segurança Linux (daemon inotify + análise de ELF) |
 | [server-controller](https://github.com/Munique-Feitoza/server-controller) | Rust · Kotlin · Android | Pocket NOC — agente Rust + app Android de monitoramento |
@@ -137,7 +137,7 @@ Tudo cabe em ~75KB total (HTML 2.7KB · CSS 20KB · JS 54KB).
 
 ## ▮ Sobre mim
 
-**Software Developer** com foco em engenharia de sistemas e low-level: distros Linux, mainframes z/OS, sistemas em Rust e C, e automação nativa Kotlin/Android. Construo do zero quando o que existe não serve.
+**Software & Systems Engineer** com foco em sistemas de missão crítica, **Mainframe (IBM z/OS, COBOL, JCL)**, engenharia de sistemas low-level em **Rust, C e Linux**, e automação nativa **Kotlin/Java/Android**. Construo do zero quando o que existe não serve.
 
 ---
 
