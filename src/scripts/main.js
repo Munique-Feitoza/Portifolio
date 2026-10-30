@@ -30,14 +30,14 @@ const CPU = {
   cls: 'cpu',
   name: 'MUNIQUE FEITOZA',
   sub:  'SOFTWARE & SYSTEMS ENGINEER',
-  part: 'Platform & SRE · Low-Level Architecture · Rust / C / Python / Linux',
+  part: 'Mainframe (z/OS & COBOL) · Low-Level Architecture · Rust / C / Linux / SRE',
   x: 460, y: 300, w: 360, h: 200,
   chamfer: 14,
   description: {
-    pt: 'Engenheira de Software & Sistemas com foco em Platform Engineering, SRE e programação de baixo nível: distros Linux, telemetria bare-metal de alta performance, agentes de sistema em Rust e C, backends de missão crítica e resiliência operacional. Construtora por padrão — quando algo não existe ou quebra, eu projeto e escrevo do zero.',
-    en: 'Software & Systems Engineer focused on Platform Engineering, SRE, and low-level architecture: Linux internals, high-performance bare-metal telemetry, systems agents in Rust and C, mission-critical backends, and operational resilience. Builder by default — when something doesn’t exist or breaks, I build it from scratch.',
+    pt: 'Engenheira de Software & Sistemas com foco em sistemas de missão crítica, Mainframe (IBM z/OS, COBOL, JCL), programação de baixo nível (Linux Internals, Rust, C, Assembly), telemetria bare-metal e confiabilidade operacional (SRE/Platform). Construtora por padrão — quando algo não existe ou quebra, eu projeto e escrevo do zero.',
+    en: 'Software & Systems Engineer focused on mission-critical systems, Mainframe (IBM z/OS, COBOL, JCL), low-level architecture (Linux internals, Rust, C, Assembly), bare-metal telemetry, and operational resilience (SRE/Platform). Builder by default — when something doesn’t exist or breaks, I build it from scratch.',
   },
-  stack: ['Rust', 'C', 'Linux Internals', 'Assembly', 'Python', 'Kotlin', 'z/OS', 'SRE / Platform', 'Docker', 'Bash', 'Git'],
+  stack: ['COBOL', 'IBM z/OS', 'JCL', 'Rust', 'C', 'Linux Internals', 'Assembly', 'Python', 'Kotlin', 'SRE / Platform', 'Docker', 'Git'],
 };
 
 const RAM = {
@@ -58,16 +58,16 @@ const CHIPS = [
   {
     id: 'munux-os',
     name: 'MUNUX',
-    sub:  'OS & Kernel · C/Rust/z/OS',
+    sub:  'OS & Mainframe · C/Rust/COBOL/z/OS',
     part: 'IC-001 · systems',
     x: 75, y: 130, w: 265, h: 160,
     pins: 'right',
     url:  'https://github.com/Munique-Feitoza/Munux',
     description: {
-      pt: 'Sistema operacional e ambiente low-level feito do zero com kernel monolítico próprio x86 e expansões modernas inspiradas em arquiteturas enterprise e z/OS. Código poliglota: Assembly no bootloader e vetores de interrupção, C (C99 freestanding) no núcleo e Rust (no_std) em camadas críticas de memória e segurança.',
-      en: 'Educational OS and low-level system built from scratch with a custom x86 monolithic kernel and modern extensions inspired by enterprise architectures and z/OS concepts. Polyglot codebase: Assembly for bootloader and interrupts, C (C99 freestanding) in the core, and Rust (no_std) for memory-critical modules.',
+      pt: 'Sistema operacional e ambiente low-level feito do zero com kernel monolítico próprio x86 e laboratório integrado de arquiteturas enterprise e Mainframe IBM z/OS (COBOL, JCL, HLASM). Código poliglota: Assembly no bootloader e vetores de interrupção, C (C99 freestanding) no núcleo e Rust (no_std) em camadas críticas de memória e segurança.',
+      en: 'Educational OS and low-level system built from scratch with a custom x86 monolithic kernel and an integrated enterprise Mainframe IBM z/OS lab (COBOL, JCL, HLASM). Polyglot codebase: Assembly for bootloader and interrupts, C (C99 freestanding) in the core, and Rust (no_std) for memory-critical modules.',
     },
-    stack: ['C', 'Assembly', 'Rust', 'z/OS concepts', 'x86 Kernel'],
+    stack: ['COBOL', 'IBM z/OS', 'JCL', 'C', 'Assembly', 'Rust', 'x86 Kernel'],
   },
   {
     id: 'munux-books',
@@ -176,8 +176,10 @@ const CONTACT = {
 const SKILLS = [
   { label: 'RUST',   x: 90,   y: 300, color: '#dea584' },
   { label: 'C',      x: 180,  y: 300, color: '#a8b9cc' },
+  { label: 'COBOL',  x: 270,  y: 300, color: '#0066ff' },
   { label: 'LINUX',  x: 90,   y: 495, color: '#fcc624' },
   { label: 'z/OS',   x: 180,  y: 495, color: '#4ad5ff' },
+  { label: 'JCL',    x: 270,  y: 495, color: '#38bdf8' },
   { label: 'KOTLIN', x: 950,  y: 300, color: '#7f52ff' },
   { label: 'PYTHON', x: 1040, y: 300, color: '#3572A5' },
   { label: 'ASM',    x: 1130, y: 300, color: '#ffb000' },
@@ -729,7 +731,7 @@ const BOOT_LINES = [
   { t: 360,  s: '[OK] MEM test ................ 64GB DDR5 ECC OK' },
   { t: 460,  s: '[OK] BUS ..................... system-bus available' },
   { t: 560,  s: '[--] Mounting /chips ...' },
-  { t: 640,  s: '      munux-os (C/Rust/zOS) .. OK' },
+  { t: 640,  s: '      munux-os (COBOL/zOS/C) . OK' },
   { t: 720,  s: '      reactive-workspace ..... OK' },
   { t: 800,  s: '      obscura ................ OK' },
   { t: 880,  s: '      munux-books ............ OK' },
