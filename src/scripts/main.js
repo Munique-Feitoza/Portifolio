@@ -748,21 +748,47 @@ function runBoot(onComplete) {
   const log   = document.getElementById('boot-log');
   const boot  = document.getElementById('boot');
   const board = document.getElementById('board');
+  let completed = false;
+
+  const finish = () => {
+    if (completed) return;
+    completed = true;
+    if (boot) {
+      boot.classList.add('gone');
+      setTimeout(() => boot.remove(), 700);
+    }
+    if (board) {
+      board.setAttribute('aria-hidden', 'false');
+      board.classList.add('lit');
+    }
+    const hud = document.getElementById('sys-hud');
+    if (hud) hud.classList.add('active');
+    const dossier = document.getElementById('view-dossier');
+    if (dossier) dossier.classList.add('lit');
+    if (onComplete) onComplete();
+  };
 
   for (const line of BOOT_LINES) {
     setTimeout(() => {
-      log.textContent += (log.textContent ? '\n' : '') + line.s;
+      if (!completed && log) log.textContent += (log.textContent ? '\n' : '') + line.s;
     }, line.t);
   }
 
   const total = BOOT_LINES[BOOT_LINES.length - 1].t + BOOT_HOLD_MS;
-  setTimeout(() => {
-    boot.classList.add('gone');
-    board.setAttribute('aria-hidden', 'false');
-    board.classList.add('lit');
-    if (onComplete) onComplete();
-  }, total);
-  setTimeout(() => boot.remove(), total + 900);
+  const timer = setTimeout(finish, total);
+
+  if (boot) {
+    boot.addEventListener('click', () => {
+      clearTimeout(timer);
+      finish();
+    });
+    window.addEventListener('keydown', (e) => {
+      if (!completed && (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ')) {
+        clearTimeout(timer);
+        finish();
+      }
+    }, { once: true });
+  }
 }
 
 /* ────────────────────────────────────────────────────────────────────────
@@ -1446,6 +1472,18 @@ function animFrame(now) {
 
   requestAnimationFrame(animFrame);
 }
+
+window.pauseBoardAnimation = function() {
+  animRunning = false;
+};
+
+window.resumeBoardAnimation = function() {
+  if (!animRunning && walkerCtx) {
+    animRunning = true;
+    animLastTime = 0;
+    requestAnimationFrame(animFrame);
+  }
+};
 
 function drawBoard(ctx) {
   drawBackground(ctx);

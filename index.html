@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#0a3d2a">
-  <meta name="description" content="Munique Feitoza — Software & Systems Engineer | Mainframe (z/OS & COBOL) · Low-Level Systems, Linux, Rust, C, Telemetria & Confiabilidade">
-  <title>MUNUX MAINBOARD · Munique Feitoza</title>
+  <meta name="description" content="Munique Feitoza — Software & Systems Engineer | Mainframe (z/OS & COBOL) · Low-Level Systems, Linux, Rust, C, Pentest (Top 2 CTF) & NASA Space Apps Global Finalist">
+  <title>MUNUX SYSTEM · Munique Feitoza | Software & Systems Engineer</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=VT323&display=swap" rel="stylesheet">
@@ -13,47 +13,279 @@
 </head>
 <body>
 
+  <!-- ─── CRT Bootloader Screen ────────────────────────────────────────── -->
   <div id="boot" aria-live="polite">
     <pre id="boot-log"></pre><span id="boot-cursor">█</span>
+    <div style="position: absolute; bottom: 20px; right: 24px; font-size: 14px; opacity: 0.5; letter-spacing: 0.05em;">
+      [CLIQUE OU PRESSIONE TECLA PARA PULAR BOOT]
+    </div>
   </div>
 
-  <main id="board" aria-hidden="true">
-    <div class="board-frame">
-      <canvas id="pcb"     width="1280" height="800" aria-hidden="true"></canvas>
-      <canvas id="walkers" width="1280" height="800" aria-hidden="true"></canvas>
-      <div id="chips" class="chips-overlay"></div>
-
-      <div class="leds">
-        <span class="led led-power" data-label="PWR"></span>
-        <span class="led led-net"   data-label="NET"></span>
-        <span class="led led-disk"  data-label="HDD"></span>
-        <span class="led led-debug" data-label="DBG"></span>
+  <!-- ─── Persistent System HUD Navigation ─────────────────────────────── -->
+  <header id="sys-hud" class="sys-hud">
+    <div class="hud-left">
+      <div class="hud-brand">
+        <span>▮ MUNUX // OPERATOR DOSSIER</span>
       </div>
-
-      <div class="scanlines" aria-hidden="true"></div>
-      <div class="vignette"  aria-hidden="true"></div>
+      <div class="hud-status-chip">
+        <span class="hud-status-led"></span>
+        <span>z/OS & x86_64 · ONLINE</span>
+      </div>
     </div>
 
-    <!-- Visualização Otimizada para Celular / Telas Menores -->
-    <section id="mobile-chips-list" class="mobile-chips-container" aria-label="Projetos e Componentes"></section>
+    <nav class="hud-nav" aria-label="Navegação do Sistema">
+      <button id="nav-btn-dossier" class="hud-pill active" type="button">01. DOSSIÊ / BIO</button>
+      <button id="nav-btn-certs" class="hud-pill" type="button">02. CERTIFICAÇÕES</button>
+      <button id="nav-btn-blog" class="hud-pill" type="button">03. DESPACHOS TÉCNICOS</button>
+      <button id="nav-btn-board" class="hud-pill hud-pill-special" type="button">▮ CAMADA FÍSICA: PLACA-MÃE</button>
+    </nav>
 
-    <footer class="silk-footer">
-      <div class="footer-left">
-        <span class="board-badge">MUNUX MAINBOARD v1.0</span>
-      </div>
-      <div class="footer-links">
-        <a href="./assets/curriculo-munique-feitoza.pdf" download class="footer-link"><span>[CV PT]</span></a>
-        <a href="./assets/curriculo-munique-feitoza-en.pdf" download class="footer-link"><span>[CV EN]</span></a>
-        <a href="https://github.com/Munique-Feitoza" target="_blank" rel="noopener noreferrer" class="footer-link"><span>GitHub</span></a>
-        <a href="https://www.linkedin.com/in/munique-feitoza-77034b231/" target="_blank" rel="noopener noreferrer" class="footer-link"><span>LinkedIn</span></a>
-        <a href="mailto:muniquefeitoz4@gmail.com" class="footer-link"><span>Email</span></a>
-      </div>
-      <div class="footer-right">
-        <span class="footer-sn">SN:0xMUNIQ · BR · 2026</span>
-      </div>
-    </footer>
-  </main>
+    <div class="hud-right">
+      <button id="nav-btn-sfx" class="hud-pill hud-pill-dim" type="button">🔈 SFX: OFF</button>
+      <a href="./assets/curriculo-munique-feitoza.pdf" download class="hud-pill hud-pill-dim">CV PT</a>
+      <a href="./assets/curriculo-munique-feitoza-en.pdf" download class="hud-pill hud-pill-dim">CV EN</a>
+    </div>
+  </header>
 
+  <!-- ─── VIEW 1: DOSSIER, CERTS & TECHNICAL BLOG ──────────────────────── -->
+  <div id="view-dossier" class="view-container active">
+    <div class="dossier-wrapper">
+
+      <!-- Section: Hero / Bio Dossier -->
+      <section id="sec-bio" class="dossier-section bio-section">
+        <div class="hero-box">
+          <div class="hero-header-row">
+            <div class="hero-titles">
+              <h1>MUNIQUE FEITOZA</h1>
+              <div class="hero-role">SOFTWARE & SYSTEMS ENGINEER</div>
+              <div class="hero-subrole">Mainframe (z/OS & COBOL) · Low-Level (Rust / C / ASM) · Offensive Security & Pentest</div>
+            </div>
+            <div class="hero-badges-col">
+              <span class="sys-tag">SN: 0xMUNIQ-BR-2026</span>
+              <span class="sys-tag">STATUS: DISPONÍVEL (REMOTO / REALOCAÇÃO)</span>
+              <span class="sys-tag">LOCAL: RIO DE JANEIRO, BR</span>
+            </div>
+          </div>
+
+          <p class="hero-bio-lead">
+            Engenheira de software focada em <strong>computação de baixo nível, resiliência de backends e arquiteturas de Mainframe</strong>. Histórico comprovado no desenvolvimento de agentes de telemetria nativos (Rust), sistemas empresariais essenciais (Python, C, x86 Assembly) e aplicações corporativas em IBM z/OS (Enterprise COBOL, JCL, z/Architecture). Experiência em diagnóstico de gargalos de baixo nível, vazão de sockets, isolamento de processos, integridade transacional estrita e segurança defensiva.
+          </p>
+
+          <!-- Arsenal Grid -->
+          <div class="arsenal-grid">
+            <div class="arsenal-pillar">
+              <div class="pillar-head">
+                <span>⚡</span> Mainframe & Enterprise
+              </div>
+              <div class="pillar-items">
+                Enterprise COBOL, IBM z/OS, JCL, ISPF, USS, Ansible for z/OS, Emulador Hercules, Princípios de HLASM.
+              </div>
+            </div>
+
+            <div class="arsenal-pillar">
+              <div class="pillar-head">
+                <span>⚙️</span> Low-Level & Systems
+              </div>
+              <div class="pillar-items">
+                Rust (no_std / async), C (C99 freestanding), x86/ARM Assembly, Linux Kernel Internals, Sockets, Seccomp.
+              </div>
+            </div>
+
+            <div class="arsenal-pillar">
+              <div class="pillar-head">
+                <span>🛡️</span> Segurança Ofensiva & CTF
+              </div>
+              <div class="pillar-items">
+                HCP V2 (Pentester Certificada), Top 2 CTF Nacional (100% resolvido), Engenharia Reversa, Exploração de Binários ELF/PE.
+              </div>
+            </div>
+
+            <div class="arsenal-pillar">
+              <div class="pillar-head">
+                <span>🚀</span> Espaço & Confiabilidade
+              </div>
+              <div class="pillar-items">
+                NASA Space Apps Global Finalist (Top 40 Mundial), Telemetria Bare-Metal, SRE, Docker, PostgreSQL, Hardware Bare-Metal.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Mini Interactive CLI Terminal -->
+        <div class="terminal-cli-wrapper">
+          <div class="cli-titlebar">
+            <div class="cli-dots">
+              <span class="cli-dot cli-dot-red"></span>
+              <span class="cli-dot cli-dot-yellow"></span>
+              <span class="cli-dot cli-dot-green"></span>
+            </div>
+            <span>munique@munux-terminal ~ v2.0-cli</span>
+            <span>UTF-8 // TTY1</span>
+          </div>
+          <div class="cli-screen">
+            <div id="cli-output" class="cli-output">
+              <div class="cli-line-prompt"><span class="cli-ps1">munique@munux:~$</span> <span class="cli-user-cmd">neofetch</span></div>
+              <pre class="cli-line-resp">   ___  __  __ _  _ _  _ _  _    OS:        MUNUX Bare-Metal 2.0
+  |  \/  ||  | || \| || | || |   KERNEL:    Munux x86_64 / z/Architecture
+  | |\/| ||  |_|| .` || |_|| |   UPTIME:    99.999%
+  |_|  |_||____||_|\_||____|_|   PACKAGES:  Rust, C99, COBOL, ASM, Python
+                                 MEMORY:    64GB DDR5 ECC
+                                 SECURITY:  HCP V2 / Top 2 CTF Nacional
+                                 SPACE:     NASA Space Apps Global Finalist</pre>
+            </div>
+            <div class="cli-input-row">
+              <span class="cli-prompt-label">munique@munux:~$</span>
+              <input type="text" id="cli-input" class="cli-input-field" placeholder="digite 'help', 'bio', 'certs', 'blog' ou 'pcb'..." autocomplete="off" spellcheck="false">
+            </div>
+            <div class="cli-chips-hint">
+              <span>Atalhos rápidos:</span>
+              <button class="cli-chip-btn" data-cmd="help" type="button">help</button>
+              <button class="cli-chip-btn" data-cmd="bio" type="button">bio</button>
+              <button class="cli-chip-btn" data-cmd="certs" type="button">certs</button>
+              <button class="cli-chip-btn" data-cmd="blog" type="button">blog</button>
+              <button class="cli-chip-btn" data-cmd="pcb" type="button">pcb</button>
+              <button class="cli-chip-btn" data-cmd="contact" type="button">contact</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section: Certifications Vault -->
+      <section id="sec-certs" class="dossier-section certs-section">
+        <h2 class="section-tag">// 02. CRYPTOGRAPHIC CERTIFICATION VAULT</h2>
+        <p class="section-desc">
+          Credenciais oficiais verificadas em arquitetura de missão crítica (Mainframe IBM), tooling moderno, segurança ofensiva prática e engenharia espacial.
+        </p>
+        <div id="certs-grid" class="certs-grid">
+          <!-- Injetado dinamicamente por dossier.js -->
+        </div>
+      </section>
+
+      <!-- Section: Engineering Dispatches / Technical Blog -->
+      <section id="sec-dispatches" class="dossier-section dispatches-section">
+        <h2 class="section-tag">// 03. ENGINEERING DISPATCHES & KERNEL LOGS</h2>
+        <p class="section-desc">
+          Artigos aprofundados, notas de arquitetura e análises sem rodeios sobre desenvolvimento bare-metal, z/OS, kernels e pensamento ofensivo.
+        </p>
+        <div id="dispatches-list" class="dispatches-list">
+          <!-- Injetado dinamicamente por dossier.js -->
+        </div>
+      </section>
+
+      <!-- Dossier Footer -->
+      <footer class="dossier-footer">
+        <div>
+          <span>MUNUX ARCHITECTURE // SN:0xMUNIQ · RIO DE JANEIRO, BR · 2026</span>
+        </div>
+        <div class="dossier-footer-links">
+          <a href="https://github.com/Munique-Feitoza" target="_blank" rel="noopener noreferrer" class="dossier-footer-link">GitHub</a>
+          <a href="https://www.linkedin.com/in/munique-feitoza-77034b231/" target="_blank" rel="noopener noreferrer" class="dossier-footer-link">LinkedIn</a>
+          <a href="mailto:muniquefeitoz4@gmail.com" class="dossier-footer-link">Email</a>
+          <a href="./assets/curriculo-munique-feitoza.pdf" download class="dossier-footer-link">[CV PT]</a>
+          <a href="./assets/curriculo-munique-feitoza-en.pdf" download class="dossier-footer-link">[CV EN]</a>
+        </div>
+      </footer>
+
+    </div>
+  </div>
+
+  <!-- ─── VIEW 2: INTERACTIVE HARDWARE MAINBOARD (PCB CANVAS) ──────────── -->
+  <div id="view-board" class="view-container">
+    <button id="board-return-btn" class="board-return-floating" type="button">
+      ⮌ RETORNAR AO DOSSIÊ & BLOG
+    </button>
+
+    <main id="board" aria-hidden="true">
+      <div class="board-frame">
+        <canvas id="pcb"     width="1280" height="800" aria-hidden="true"></canvas>
+        <canvas id="walkers" width="1280" height="800" aria-hidden="true"></canvas>
+        <div id="chips" class="chips-overlay"></div>
+
+        <div class="leds">
+          <span class="led led-power" data-label="PWR"></span>
+          <span class="led led-net"   data-label="NET"></span>
+          <span class="led led-disk"  data-label="HDD"></span>
+          <span class="led led-debug" data-label="DBG"></span>
+        </div>
+
+        <div class="scanlines" aria-hidden="true"></div>
+        <div class="vignette"  aria-hidden="true"></div>
+      </div>
+
+      <!-- Visualização Otimizada para Celular / Telas Menores -->
+      <section id="mobile-chips-list" class="mobile-chips-container" aria-label="Projetos e Componentes"></section>
+
+      <footer class="silk-footer">
+        <div class="footer-left">
+          <span class="board-badge">MUNUX MAINBOARD v2.0</span>
+        </div>
+        <div class="footer-links">
+          <a href="./assets/curriculo-munique-feitoza.pdf" download class="footer-link"><span>[CV PT]</span></a>
+          <a href="./assets/curriculo-munique-feitoza-en.pdf" download class="footer-link"><span>[CV EN]</span></a>
+          <a href="https://github.com/Munique-Feitoza" target="_blank" rel="noopener noreferrer" class="footer-link"><span>GitHub</span></a>
+          <a href="https://www.linkedin.com/in/munique-feitoza-77034b231/" target="_blank" rel="noopener noreferrer" class="footer-link"><span>LinkedIn</span></a>
+          <a href="mailto:muniquefeitoz4@gmail.com" class="footer-link"><span>Email</span></a>
+        </div>
+        <div class="footer-right">
+          <span class="footer-sn">SN:0xMUNIQ · BR · 2026</span>
+        </div>
+      </footer>
+    </main>
+  </div>
+
+  <!-- ─── MODAL: CERTIFICATION SPECIFICATION INSPECTION ────────────────── -->
+  <dialog id="cert-modal" class="custom-modal" aria-labelledby="cm-title">
+    <article class="modal-frame">
+      <header class="modal-head">
+        <div>
+          <div class="modal-pre-title">
+            <span id="cm-badge" class="cert-badge">IBM · 2026</span>
+            <span id="cm-hash" class="cert-hash">0xHASH</span>
+          </div>
+          <h2 id="cm-title" class="modal-title">CERTIFICATION TITLE</h2>
+          <div id="cm-category" class="cert-category">CATEGORY</div>
+        </div>
+        <button class="modal-close-btn" type="button">▮ FECHAR [ESC]</button>
+      </header>
+      <div class="modal-body">
+        <p id="cm-summary" style="font-weight: 700; color: var(--copper-bright); margin-bottom: 1rem;"></p>
+        <p id="cm-details" style="margin-bottom: 1.5rem; line-height: 1.7;"></p>
+        <h4 style="font-size: 0.8rem; color: var(--amber); margin-bottom: 0.6rem; text-transform: uppercase;">Competências Verificadas</h4>
+        <div id="cm-skills" class="cert-skills" style="margin-bottom: 2rem;"></div>
+      </div>
+      <footer style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--copper-dim); padding-top: 1rem;">
+        <a id="cm-link" href="#" target="_blank" rel="noopener noreferrer" class="btn-read-dispatch">
+          VERIFICAR CREDENCIAL OFICIAL →
+        </a>
+        <span style="font-size: 11px; color: var(--silk-dim);">CRIPTO-VERIFICAÇÃO: VÁLIDA</span>
+      </footer>
+    </article>
+  </dialog>
+
+  <!-- ─── MODAL: TECHNICAL DISPATCH / BLOG READER ──────────────────────── -->
+  <dialog id="dispatch-modal" class="custom-modal doc-modal" aria-labelledby="dm-title">
+    <article class="modal-frame">
+      <header class="modal-head">
+        <div>
+          <div class="modal-pre-title">
+            <span id="dm-ref" class="dispatch-ref">LOG-000</span>
+            <span id="dm-date" class="dispatch-date">DATE</span>
+          </div>
+          <h2 id="dm-title" class="modal-title">ARTICLE TITLE</h2>
+        </div>
+        <button class="modal-close-btn" type="button">▮ FECHAR [ESC]</button>
+      </header>
+      <div id="dm-body" class="modal-body">
+        <!-- Renderizado dinamicamente com markdown formatado -->
+      </div>
+      <footer style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--copper-dim); padding-top: 1rem; margin-top: 2rem;">
+        <span style="font-size: 11px; color: var(--silk-dim);">AUTORA: MUNIQUE FEITOZA // MUNUX KERNEL LOGS</span>
+        <button class="modal-close-btn" type="button">▮ FECHAR LEITURA</button>
+      </footer>
+    </article>
+  </dialog>
+
+  <!-- ─── MODAL: CHIP DATASHEET (PCB COMPONENT) ────────────────────────── -->
   <dialog id="datasheet" aria-labelledby="ds-title">
     <article class="ds-frame">
       <header class="ds-head">
@@ -70,11 +302,12 @@
       <div class="ds-contacts" id="ds-contacts" hidden></div>
       <footer class="ds-foot">
         <a class="ds-link" id="ds-link" href="#" target="_blank" rel="noopener noreferrer">OPEN REPO →</a>
-        <div class="ds-meta">REV 1.0 · MUNUX</div>
+        <div class="ds-meta">REV 2.0 · MUNUX</div>
       </footer>
     </article>
   </dialog>
 
   <script src="./src/scripts/main.js" defer></script>
+  <script src="./src/scripts/dossier.js" defer></script>
 </body>
 </html>
